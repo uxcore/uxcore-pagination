@@ -1,8 +1,8 @@
-# uxcore-tree
+# uxcore-pagination
 ---
 
-- tags: uxcore, tree
-- description: uxcore tree
+- tags: uxcore, pagination
+- description: uxcore pagination
 - maintainers: vincent.bian
 - version: 0.1.0
 - lastupdate: 2015/7/12
@@ -13,8 +13,8 @@
 #### setup develop environment
 
 ```sh
-$ git clone https://github.com/uxcore/uxcore-tree
-$ cd uxcore-tree
+$ git clone https://github.com/uxcore/uxcore-pagination
+$ cd uxcore-pagination
 $ npm install
 $ npm run dev
 ```
@@ -31,19 +31,13 @@ $ npm run deploy
 ## Usage
 
 ```js
-var tree = require('uxcore-tree');
+var Pagination = require('uxcore-pagination');
 React.render(
-	<tree
-		placement="top"
-		trigger="hover"
-		title={title}
-		delay={0.1}
-		<span>tree</span>
-	</tree>, document.getElementById('target'));
+	<Pagination onChange={onChange} total={50} />, document.getElementById('target'));
 ```
 
 ### demo
-http://uxcore.github.io/uxcore-tree/
+http://uxcore.github.io/uxcore-pagination/
 
 ## API
 
@@ -51,7 +45,11 @@ http://uxcore.github.io/uxcore-tree/
 
 |参数|说明|类型|默认值|
 |---|----|---|------|
-|placement|气泡框位置，可选 `top/left/right/bottom`|string|top|
-|title|提示文字|string/jsx|无|
-|trigger|触发方式，可选`hover/click`|string|hover|
-|delay|延迟|number|0.1|
+|current|当前页数|number|1|
+|total|数据总数|number/jsx|0|
+|pageSize|每页条数|number|10|
+|onChange|页码改变的回调，参数是改变后的页码|function|noop|
+|showSizeChanger|是否可以改变 pageSize|bool|false|
+|showQuickJump|是否可以快速跳转至某页|bool|false|
+|className|当为「mini」时，是小尺寸分页|string||
+|simple|当添加该属性时，显示为简单分页|object||
