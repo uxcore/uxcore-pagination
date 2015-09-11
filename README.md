@@ -1,12 +1,13 @@
 # uxcore-pagination
----
 
 - tags: uxcore, pagination
 - description: uxcore pagination
 - maintainers: vincent.bian
 - version: 0.1.0
-- lastupdate: 2015/7/12
+- lastupdate: 2015/9/11
 - screenshots:
+
+---
 
 ## TL;DR
 
@@ -16,17 +17,9 @@
 $ git clone https://github.com/uxcore/uxcore-pagination
 $ cd uxcore-pagination
 $ npm install
-$ npm run dev
+$ gulp server
 ```
 nav http://localhost:9090/webpack-dev-server/example/ to see the demo
-
-#### deploy to gh-pages
-[refer to]( http://stackoverflow.com/questions/17643381/how-to-upload-my-angularjs-static-site-to-github-pages)
-```sh
-$ npm run build
-$ git add build & git commit -m 'update deploy files'
-$ npm run deploy
-```
 
 ## Usage
 

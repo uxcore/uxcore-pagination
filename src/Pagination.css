@@ -1,0 +1,181 @@
+/**
+ * Pagination Component Style for uxcore
+ * @author
+ *
+ * Copyright 2014-2015, Uxcore Team, Alinw.
+ * All rights reserved.
+ */
+/*@pager-bg:                             @pagination-bg;
+@pager-border:                         @pagination-border;
+@pager-border-radius:                  15px;
+
+@pager-hover-bg:                       @pagination-hover-bg;
+
+@pager-active-bg:                      @pagination-active-bg;
+@pager-active-color:                   @pagination-active-color;*/
+.kuma-pagination {
+  font-size: 12px;
+  font-family: 'Arial';
+  user-select: none;
+}
+.kuma-pagination:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.kuma-pagination-item {
+  cursor: pointer;
+  min-width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  list-style: none;
+  float: left;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  margin-right: 8px;
+}
+.kuma-pagination-item a {
+  text-decoration: none;
+  color: #666;
+}
+.kuma-pagination-item:hover {
+  border-color: #288df0;
+}
+.kuma-pagination-item:hover a {
+  color: #288df0;
+}
+.kuma-pagination-item-active {
+  background-color: #288df0;
+  border-color: #288df0;
+}
+.kuma-pagination-item-active a {
+  color: #fff;
+}
+.kuma-pagination-item-active:hover a {
+  color: #fff;
+}
+.kuma-pagination-jump-prev:after,
+.kuma-pagination-jump-next:after {
+  content: "•••";
+  display: block;
+  letter-spacing: 2px;
+  color: #ccc;
+  font-size: 12px;
+  margin-top: 1px;
+}
+.kuma-pagination-jump-prev:hover:after,
+.kuma-pagination-jump-next:hover:after {
+  color: #288df0;
+}
+.kuma-pagination-jump-prev:hover:after {
+  content: "«";
+}
+.kuma-pagination-jump-next:hover:after {
+  content: "»";
+}
+.kuma-pagination-prev,
+.kuma-pagination-jump-prev,
+.kuma-pagination-jump-next {
+  margin-right: 8px;
+}
+.kuma-pagination-prev,
+.kuma-pagination-next,
+.kuma-pagination-jump-prev,
+.kuma-pagination-jump-next {
+  cursor: pointer;
+  color: #666;
+  font-size: 10px;
+  list-style: none;
+  min-width: 28px;
+  height: 28px;
+  line-height: 28px;
+  float: left;
+  text-align: center;
+}
+.kuma-pagination-prev a:after {
+  content: "‹";
+  display: block;
+}
+.kuma-pagination-next a:after {
+  content: "›";
+  display: block;
+}
+.kuma-pagination-prev,
+.kuma-pagination-next {
+  border: 1px solid #d9d9d9;
+  font-size: 18px;
+}
+.kuma-pagination-prev a,
+.kuma-pagination-next a {
+  color: #666;
+}
+.kuma-pagination-prev a:after,
+.kuma-pagination-next a:after {
+  margin-top: -1px;
+}
+.kuma-pagination-disabled {
+  cursor: not-allowed;
+}
+.kuma-pagination-disabled a {
+  color: #ccc;
+}
+.kuma-pagination-options {
+  float: left;
+  margin-left: 15px;
+}
+.kuma-pagination-options-size-changer {
+  float: left;
+  width: 80px;
+}
+.kuma-pagination-options-quick-jumper {
+  float: left;
+  margin-left: 16px;
+  height: 28px;
+  line-height: 28px;
+}
+.kuma-pagination-options-quick-jumper input {
+  margin: 0 8px;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  outline: none;
+  padding: 3px 12px;
+  width: 50px;
+  height: 28px;
+}
+.kuma-pagination-options-quick-jumper input:hover {
+  border-color: #288df0;
+}
+.kuma-pagination-simple .kuma-pagination-prev,
+.kuma-pagination-simple .kuma-pagination-next {
+  border: none;
+  height: 24px;
+  line-height: 24px;
+  margin: 0;
+  font-size: 18px;
+}
+.kuma-pagination-simple .kuma-pagination-simple-pager {
+  float: left;
+  margin-right: 8px;
+}
+.kuma-pagination-simple .kuma-pagination-simple-pager .kuma-pagination-slash {
+  margin: 0 10px;
+}
+.kuma-pagination-simple .kuma-pagination-simple-pager input {
+  margin: 0 8px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  outline: none;
+  padding: 5px 8px;
+  width: 30px;
+  min-height: 20px;
+}
+.kuma-pagination-simple .kuma-pagination-simple-pager input:hover {
+  border-color: #288df0;
+}
+
+/*# sourceMappingURL=Pagination.css.map */
