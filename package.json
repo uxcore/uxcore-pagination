@@ -1,6 +1,6 @@
 {
   "name": "uxcore-pagination",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "pagination ui component for react",
   "main": "src/index.js",
   "scripts": {
@@ -37,9 +37,10 @@
   "dependencies": {
     "classnames": "^2.1.2",
     "object-assign": "^2.0.0",
-    "rc-pagination": "~1.1.12",
+    "rc-pagination": "~1.1.15",
     "react": "^0.13.3",
-    "uxcore-kuma": "~1.0.6"
+    "uxcore-kuma": "~1.0.6",
+    "uxcore-select2": "~0.1.4"
   },
   "peerDependencies": {
     "react": ">=0.13.0"

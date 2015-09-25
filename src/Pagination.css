@@ -142,9 +142,9 @@
   background-color: #fff;
   border: 1px solid #d9d9d9;
   outline: none;
-  padding: 3px 12px;
   width: 50px;
   height: 28px;
+  text-align: center;
 }
 .kuma-pagination-options-quick-jumper input:hover {
   border-color: #288df0;
@@ -166,15 +166,41 @@
 }
 .kuma-pagination-simple .kuma-pagination-simple-pager input {
   margin: 0 8px;
-  box-sizing: border-box;
   background-color: #fff;
   border: 1px solid #d9d9d9;
   outline: none;
-  padding: 5px 8px;
   width: 30px;
   min-height: 20px;
+  text-align: center;
 }
 .kuma-pagination-simple .kuma-pagination-simple-pager input:hover {
+  border-color: #288df0;
+}
+.kuma-pagination.mini .kuma-pagination-prev,
+.kuma-pagination.mini .kuma-pagination-next,
+.kuma-pagination.mini .kuma-pagination-jump-prev,
+.kuma-pagination.mini .kuma-pagination-jump-next {
+  font-size: 10px;
+  min-width: 18px;
+  height: 18px;
+  line-height: 18px;
+}
+.kuma-pagination.mini .kuma-pagination-item {
+  margin-right: 6px;
+  min-width: 18px;
+  height: 18px;
+  line-height: 18px;
+}
+.kuma-pagination.mini .kuma-pagination-options .kuma-pagination-options-quick-jumper {
+  margin-left: 8px;
+  height: 18px;
+  line-height: 18px;
+}
+.kuma-pagination.mini .kuma-pagination-options .kuma-pagination-options-quick-jumper input {
+  width: 36px;
+  height: 18px;
+}
+.kuma-pagination.mini .kuma-pagination-options .kuma-pagination-options-quick-jumper input:hover {
   border-color: #288df0;
 }
 
