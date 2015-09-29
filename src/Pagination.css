@@ -203,5 +203,14 @@
 .kuma-pagination.mini .kuma-pagination-options .kuma-pagination-options-quick-jumper input:hover {
   border-color: #288df0;
 }
+.kuma-pagination.mini .kuma-pagination-options .kuma-pagination-options-size-changer .kuma-select-selection {
+  height: 18px;
+}
+.kuma-pagination.mini .kuma-pagination-options .kuma-pagination-options-size-changer .kuma-select-selection .kuma-select-selection__rendered {
+  line-height: 18px;
+}
+.kuma-pagination.mini .kuma-pagination-options .kuma-pagination-options-size-changer .kuma-select-selection .kuma-select-arrow {
+  height: 18px;
+}
 
 /*# sourceMappingURL=Pagination.css.map */
