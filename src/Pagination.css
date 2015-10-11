@@ -151,18 +151,19 @@
 }
 .kuma-pagination-simple .kuma-pagination-prev,
 .kuma-pagination-simple .kuma-pagination-next {
-  border: none;
-  height: 24px;
-  line-height: 24px;
-  margin: 0;
-  font-size: 18px;
+  font-size: 10px;
+  min-width: 18px;
+  height: 18px;
+  line-height: 18px;
+}
+.kuma-pagination-simple .kuma-pagination-current {
+  color: #ff6600;
 }
 .kuma-pagination-simple .kuma-pagination-simple-pager {
   float: left;
   margin-right: 8px;
-}
-.kuma-pagination-simple .kuma-pagination-simple-pager .kuma-pagination-slash {
-  margin: 0 10px;
+  line-height: 18px;
+  font-weight: bold;
 }
 .kuma-pagination-simple .kuma-pagination-simple-pager input {
   margin: 0 8px;
@@ -211,6 +212,14 @@
 }
 .kuma-pagination.mini .kuma-pagination-options .kuma-pagination-options-size-changer .kuma-select-selection .kuma-select-arrow {
   height: 18px;
+  margin-top: -5px;
+}
+.kuma-pagination-options-size-changer,
+.kuma-pagination-options-size-changer-dropdown {
+  font-size: 12px;
+}
+.kuma-pagination-options-size-changer-dropdown .kuma-select-dropdown-menu-item {
+  padding: 7px 16px 7px 11px;
 }
 
 /*# sourceMappingURL=Pagination.css.map */
