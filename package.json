@@ -32,6 +32,8 @@
     "gulp-just-replace": "~1.0.2",
     "gulp-less": "~3.0.3",
     "gulp-sourcemaps": "~1.5.2",
+    "react": "~0.14.0",
+    "react-dom": "~0.14.0",
     "webpack": "^1.10.5"
   },
   "dependencies": {
@@ -41,9 +43,6 @@
     "react": "^0.13.3",
     "uxcore-kuma": "~1.0.6",
     "uxcore-select2": "~0.1.4"
-  },
-  "peerDependencies": {
-    "react": ">=0.13.0"
   },
   "author": "",
   "contributors": [],
