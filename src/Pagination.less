@@ -6,7 +6,7 @@
  * All rights reserved.
  */
 
-@import "../node_modules/uxcore-kuma/src/less/variables";
+@import "../node_modules/uxcore-kuma/src/variables";
 
 @paginationPrefix: kuma-pagination;
 
@@ -32,34 +32,34 @@
     text-align: center;
     list-style: none;
     float: left;
-    border: 1px solid #d9d9d9;
-    background-color: #fff;
+    border: 1px solid @pagination-item-border;
+    background-color: @pagination-item-bg;
     margin-right: 8px;
 
     a {
       text-decoration: none;
-      color: #666;
+      color: @pagination-item-text;
     }
 
 
     &:hover {
-      border-color: @color-blue-dark;
+      border-color: @brand-primary;
       a {
-        color: @color-blue-dark;
+        color: @brand-primary;
       }
     }
 
     &-active {
-      background-color: @color-blue-dark;
-      border-color: @color-blue-dark;
+      background-color: @brand-primary;
+      border-color: @brand-primary;
 
       a {
-        color: #fff;
+        color: @pagination-item-active-text;
       }
 
       &:hover {
         a {
-          color: #fff;
+          color: @pagination-item-active-text;
         }
       }
     }
@@ -77,7 +77,7 @@
 
     &:hover {
       &:after {
-        color: @color-blue-dark;
+        color: @brand-primary;
       }
     }
 
@@ -104,7 +104,7 @@
   }
   &-prev, &-next, &-jump-prev, &-jump-next {
     cursor: pointer;
-    color: #666;
+    color: @pagination-item-text;
     font-size: 10px;
     list-style: none;
     min-width: 28px;
@@ -133,10 +133,10 @@
   }
 
   &-prev, &-next {
-    border: 1px solid #d9d9d9;
+    border: 1px solid @pagination-item-border;
     font-size: 18px;
     a {
-      color: #666;
+      color: @pagination-item-text;
       &:after {
         margin-top: -1px;
       }
@@ -144,9 +144,9 @@
   }
 
   &-disabled {
-    cursor: not-allowed;
+    cursor: @cursor-disabled;
     a {
-      color: #ccc;
+      color: @pagination-item-disabled-text;
     }
   }
 
@@ -166,15 +166,15 @@
 
       input {
         margin: 0 8px;
-        background-color: #fff;
-        border: 1px solid #d9d9d9;
+        background-color: @white;
+        border: 1px solid @pagination-item-border;
         outline: none;
         width: 50px;
         height: 28px;
         text-align: center;
 
         &:hover {
-          border-color: @color-blue-dark;
+          border-color: @brand-primary;
         }
       }
     }
@@ -182,32 +182,33 @@
 
   &-simple {
     .@{paginationPrefix}-prev, .@{paginationPrefix}-next {
-      border: none;
-      height: 24px;
-      line-height: 24px;
-      margin: 0;
-      font-size: 18px;
+        font-size: 10px;
+        min-width: 18px;
+        height: 18px;
+        line-height: 18px;
+    }
+
+    .@{paginationPrefix}-current {
+        color: @brand-primary;
     }
 
     .@{paginationPrefix}-simple-pager {
       float: left;
       margin-right: 8px;
-
-      .@{paginationPrefix}-slash {
-        margin: 0 10px;
-      }
+      line-height: 18px;
+      font-weight: bold;
 
       input {
         margin: 0 8px;
-        background-color: #fff;
-        border: 1px solid #d9d9d9;
+        background-color: @white;
+        border: 1px solid @pagination-item-border;
         outline: none;
         width: 30px;
         min-height: 20px;
         text-align: center;
 
         &:hover {
-          border-color: @color-blue-dark;
+          border-color: @brand-primary;
         }
       }
 
@@ -240,7 +241,7 @@
                     height: 18px;
 
                     &:hover {
-                        border-color: @color-blue-dark;
+                        border-color: @brand-primary;
                     }
                 }
             }
@@ -252,9 +253,21 @@
                     }
                     .kuma-select-arrow {
                         height: 18px;
+                        margin-top: -5px;
                     }
                 }
             }
+
         }
     }
+}
+
+.@{paginationPrefix}-options-size-changer,
+.@{paginationPrefix}-options-size-changer-dropdown {
+  font-size: 12px;
+}
+.@{paginationPrefix}-options-size-changer-dropdown {
+  .kuma-select-dropdown-menu-item {
+    padding: 7px 16px 7px 11px;
+  }
 }

@@ -5,14 +5,6 @@
  * Copyright 2014-2015, Uxcore Team, Alinw.
  * All rights reserved.
  */
-/*@pager-bg:                             @pagination-bg;
-@pager-border:                         @pagination-border;
-@pager-border-radius:                  15px;
-
-@pager-hover-bg:                       @pagination-hover-bg;
-
-@pager-active-bg:                      @pagination-active-bg;
-@pager-active-color:                   @pagination-active-color;*/
 .kuma-pagination {
   font-size: 12px;
   font-family: 'Arial';
@@ -35,28 +27,28 @@
   list-style: none;
   float: left;
   border: 1px solid #d9d9d9;
-  background-color: #fff;
+  background-color: #ffffff;
   margin-right: 8px;
 }
 .kuma-pagination-item a {
   text-decoration: none;
-  color: #666;
+  color: #666666;
 }
 .kuma-pagination-item:hover {
-  border-color: #288df0;
+  border-color: #ff9900;
 }
 .kuma-pagination-item:hover a {
-  color: #288df0;
+  color: #ff9900;
 }
 .kuma-pagination-item-active {
-  background-color: #288df0;
-  border-color: #288df0;
+  background-color: #ff9900;
+  border-color: #ff9900;
 }
 .kuma-pagination-item-active a {
-  color: #fff;
+  color: #ffffff;
 }
 .kuma-pagination-item-active:hover a {
-  color: #fff;
+  color: #ffffff;
 }
 .kuma-pagination-jump-prev:after,
 .kuma-pagination-jump-next:after {
@@ -69,7 +61,7 @@
 }
 .kuma-pagination-jump-prev:hover:after,
 .kuma-pagination-jump-next:hover:after {
-  color: #288df0;
+  color: #ff9900;
 }
 .kuma-pagination-jump-prev:hover:after {
   content: "«";
@@ -87,7 +79,7 @@
 .kuma-pagination-jump-prev,
 .kuma-pagination-jump-next {
   cursor: pointer;
-  color: #666;
+  color: #666666;
   font-size: 10px;
   list-style: none;
   min-width: 28px;
@@ -111,7 +103,7 @@
 }
 .kuma-pagination-prev a,
 .kuma-pagination-next a {
-  color: #666;
+  color: #666666;
 }
 .kuma-pagination-prev a:after,
 .kuma-pagination-next a:after {
@@ -121,7 +113,7 @@
   cursor: not-allowed;
 }
 .kuma-pagination-disabled a {
-  color: #ccc;
+  color: #cccccc;
 }
 .kuma-pagination-options {
   float: left;
@@ -139,7 +131,7 @@
 }
 .kuma-pagination-options-quick-jumper input {
   margin: 0 8px;
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid #d9d9d9;
   outline: none;
   width: 50px;
@@ -147,26 +139,27 @@
   text-align: center;
 }
 .kuma-pagination-options-quick-jumper input:hover {
-  border-color: #288df0;
+  border-color: #ff9900;
 }
 .kuma-pagination-simple .kuma-pagination-prev,
 .kuma-pagination-simple .kuma-pagination-next {
-  border: none;
-  height: 24px;
-  line-height: 24px;
-  margin: 0;
-  font-size: 18px;
+  font-size: 10px;
+  min-width: 18px;
+  height: 18px;
+  line-height: 18px;
+}
+.kuma-pagination-simple .kuma-pagination-current {
+  color: #ff9900;
 }
 .kuma-pagination-simple .kuma-pagination-simple-pager {
   float: left;
   margin-right: 8px;
-}
-.kuma-pagination-simple .kuma-pagination-simple-pager .kuma-pagination-slash {
-  margin: 0 10px;
+  line-height: 18px;
+  font-weight: bold;
 }
 .kuma-pagination-simple .kuma-pagination-simple-pager input {
   margin: 0 8px;
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid #d9d9d9;
   outline: none;
   width: 30px;
@@ -174,7 +167,7 @@
   text-align: center;
 }
 .kuma-pagination-simple .kuma-pagination-simple-pager input:hover {
-  border-color: #288df0;
+  border-color: #ff9900;
 }
 .kuma-pagination.mini .kuma-pagination-prev,
 .kuma-pagination.mini .kuma-pagination-next,
@@ -201,7 +194,7 @@
   height: 18px;
 }
 .kuma-pagination.mini .kuma-pagination-options .kuma-pagination-options-quick-jumper input:hover {
-  border-color: #288df0;
+  border-color: #ff9900;
 }
 .kuma-pagination.mini .kuma-pagination-options .kuma-pagination-options-size-changer .kuma-select-selection {
   height: 18px;
@@ -211,6 +204,14 @@
 }
 .kuma-pagination.mini .kuma-pagination-options .kuma-pagination-options-size-changer .kuma-select-selection .kuma-select-arrow {
   height: 18px;
+  margin-top: -5px;
+}
+.kuma-pagination-options-size-changer,
+.kuma-pagination-options-size-changer-dropdown {
+  font-size: 12px;
+}
+.kuma-pagination-options-size-changer-dropdown .kuma-select-dropdown-menu-item {
+  padding: 7px 16px 7px 11px;
 }
 
 /*# sourceMappingURL=Pagination.css.map */
