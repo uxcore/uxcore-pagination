@@ -41,4 +41,4 @@ http://uxcore.github.io/uxcore/components/pagination/
 |onShowSizeChange|pageSize 变化的回调|function|noop|
 |showQuickJump|是否可以快速跳转至某页|bool|false|
 |className|当为「mini」时，是小尺寸分页|string||
-|simple|当添加该属性时，显示为简单分页|object||
+|simple|当添加该属性时，显示为简单分页|object|无|
