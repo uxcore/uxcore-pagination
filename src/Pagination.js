@@ -38,13 +38,13 @@ class Pagination extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if ('current' in nextProps) {
+    if (nextProps.current != this.props.current) {
       this.setState({
         current: nextProps.current,
       });
     }
 
-    if ('pageSize' in nextProps) {
+    if (nextProps.pageSize != this.props.pageSize) {
       this.setState({
         pageSize: nextProps.pageSize,
       });
@@ -217,6 +217,7 @@ class Pagination extends React.Component {
 
   _handleChange(p) {
     let page = p;
+    let me = this;
     if (this._isValid(page)) {
       if (page > this._calcPage()) {
         page = this._calcPage();
@@ -224,8 +225,9 @@ class Pagination extends React.Component {
       this.setState({
         current: page,
         _current: page,
+      }, () => {
+        me.props.onChange(page);
       });
-      this.props.onChange(page);
 
       return page;
     }
