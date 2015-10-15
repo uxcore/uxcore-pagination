@@ -37,11 +37,9 @@
     "webpack": "^1.10.5"
   },
   "dependencies": {
-    "classnames": "^2.1.2",
+    "classnames": "^2.1.5",
     "object-assign": "^2.0.0",
-    "react": "^0.13.3",
-    "uxcore-kuma": "^1.1.0",
-    "uxcore-select2": "~0.1.4"
+    "uxcore-select2": "^0.1.7"
   },
   "author": "",
   "contributors": [],
