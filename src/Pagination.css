@@ -27,12 +27,12 @@
   list-style: none;
   float: left;
   border: 1px solid #d9d9d9;
-  background-color: #ffffff;
+  background-color: #fff;
   margin-right: 8px;
 }
 .kuma-page-item a {
   text-decoration: none;
-  color: #666666;
+  color: #666;
 }
 .kuma-page-item:hover {
   border-color: #ff9900;
@@ -45,10 +45,10 @@
   border-color: #ff9900;
 }
 .kuma-page-item-active a {
-  color: #ffffff;
+  color: #fff;
 }
 .kuma-page-item-active:hover a {
-  color: #ffffff;
+  color: #fff;
 }
 .kuma-page-jump-prev:after,
 .kuma-page-jump-next:after {
@@ -79,7 +79,7 @@
 .kuma-page-jump-prev,
 .kuma-page-jump-next {
   cursor: pointer;
-  color: #666666;
+  color: #666;
   font-size: 10px;
   list-style: none;
   min-width: 28px;
@@ -103,7 +103,7 @@
 }
 .kuma-page-prev a,
 .kuma-page-next a {
-  color: #666666;
+  color: #666;
 }
 .kuma-page-prev a:after,
 .kuma-page-next a:after {
@@ -113,7 +113,7 @@
   cursor: not-allowed;
 }
 .kuma-page-disabled a {
-  color: #cccccc;
+  color: #ccc;
 }
 .kuma-page-options {
   float: left;
@@ -131,7 +131,7 @@
 }
 .kuma-page-options-quick-jumper input {
   margin: 0 8px;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid #d9d9d9;
   outline: none;
   width: 50px;
@@ -159,7 +159,7 @@
 }
 .kuma-page-simple .kuma-page-simple-pager input {
   margin: 0 8px;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid #d9d9d9;
   outline: none;
   width: 30px;
@@ -210,7 +210,7 @@
 .kuma-page-options-size-changer-dropdown {
   font-size: 12px;
 }
-.kuma-page-options-size-changer-dropdown .kuma-select-dropdown-menu-item {
+.kuma-page-options-size-changer-dropdown .kuma-select2-dropdown-menu-item {
   padding: 7px 16px 7px 11px;
 }
 
