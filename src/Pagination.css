@@ -5,12 +5,12 @@
  * Copyright 2014-2015, Uxcore Team, Alinw.
  * All rights reserved.
  */
-.kuma-pagination {
+.kuma-page {
   font-size: 12px;
   font-family: 'Arial';
   user-select: none;
 }
-.kuma-pagination:after {
+.kuma-page:after {
   content: " ";
   display: block;
   height: 0;
@@ -18,7 +18,7 @@
   overflow: hidden;
   visibility: hidden;
 }
-.kuma-pagination-item {
+.kuma-page-item {
   cursor: pointer;
   min-width: 28px;
   height: 28px;
@@ -30,28 +30,28 @@
   background-color: #ffffff;
   margin-right: 8px;
 }
-.kuma-pagination-item a {
+.kuma-page-item a {
   text-decoration: none;
   color: #666666;
 }
-.kuma-pagination-item:hover {
+.kuma-page-item:hover {
   border-color: #ff9900;
 }
-.kuma-pagination-item:hover a {
+.kuma-page-item:hover a {
   color: #ff9900;
 }
-.kuma-pagination-item-active {
+.kuma-page-item-active {
   background-color: #ff9900;
   border-color: #ff9900;
 }
-.kuma-pagination-item-active a {
+.kuma-page-item-active a {
   color: #ffffff;
 }
-.kuma-pagination-item-active:hover a {
+.kuma-page-item-active:hover a {
   color: #ffffff;
 }
-.kuma-pagination-jump-prev:after,
-.kuma-pagination-jump-next:after {
+.kuma-page-jump-prev:after,
+.kuma-page-jump-next:after {
   content: "•••";
   display: block;
   letter-spacing: 2px;
@@ -59,25 +59,25 @@
   font-size: 12px;
   margin-top: 1px;
 }
-.kuma-pagination-jump-prev:hover:after,
-.kuma-pagination-jump-next:hover:after {
+.kuma-page-jump-prev:hover:after,
+.kuma-page-jump-next:hover:after {
   color: #ff9900;
 }
-.kuma-pagination-jump-prev:hover:after {
+.kuma-page-jump-prev:hover:after {
   content: "«";
 }
-.kuma-pagination-jump-next:hover:after {
+.kuma-page-jump-next:hover:after {
   content: "»";
 }
-.kuma-pagination-prev,
-.kuma-pagination-jump-prev,
-.kuma-pagination-jump-next {
+.kuma-page-prev,
+.kuma-page-jump-prev,
+.kuma-page-jump-next {
   margin-right: 8px;
 }
-.kuma-pagination-prev,
-.kuma-pagination-next,
-.kuma-pagination-jump-prev,
-.kuma-pagination-jump-next {
+.kuma-page-prev,
+.kuma-page-next,
+.kuma-page-jump-prev,
+.kuma-page-jump-next {
   cursor: pointer;
   color: #666666;
   font-size: 10px;
@@ -88,48 +88,48 @@
   float: left;
   text-align: center;
 }
-.kuma-pagination-prev a:after {
+.kuma-page-prev a:after {
   content: "‹";
   display: block;
 }
-.kuma-pagination-next a:after {
+.kuma-page-next a:after {
   content: "›";
   display: block;
 }
-.kuma-pagination-prev,
-.kuma-pagination-next {
+.kuma-page-prev,
+.kuma-page-next {
   border: 1px solid #d9d9d9;
   font-size: 18px;
 }
-.kuma-pagination-prev a,
-.kuma-pagination-next a {
+.kuma-page-prev a,
+.kuma-page-next a {
   color: #666666;
 }
-.kuma-pagination-prev a:after,
-.kuma-pagination-next a:after {
+.kuma-page-prev a:after,
+.kuma-page-next a:after {
   margin-top: -1px;
 }
-.kuma-pagination-disabled {
+.kuma-page-disabled {
   cursor: not-allowed;
 }
-.kuma-pagination-disabled a {
+.kuma-page-disabled a {
   color: #cccccc;
 }
-.kuma-pagination-options {
+.kuma-page-options {
   float: left;
   margin-left: 15px;
 }
-.kuma-pagination-options-size-changer {
+.kuma-page-options-size-changer {
   float: left;
   width: 80px;
 }
-.kuma-pagination-options-quick-jumper {
+.kuma-page-options-quick-jumper {
   float: left;
   margin-left: 16px;
   height: 28px;
   line-height: 28px;
 }
-.kuma-pagination-options-quick-jumper input {
+.kuma-page-options-quick-jumper input {
   margin: 0 8px;
   background-color: #ffffff;
   border: 1px solid #d9d9d9;
@@ -138,26 +138,26 @@
   height: 28px;
   text-align: center;
 }
-.kuma-pagination-options-quick-jumper input:hover {
+.kuma-page-options-quick-jumper input:hover {
   border-color: #ff9900;
 }
-.kuma-pagination-simple .kuma-pagination-prev,
-.kuma-pagination-simple .kuma-pagination-next {
+.kuma-page-simple .kuma-page-prev,
+.kuma-page-simple .kuma-page-next {
   font-size: 10px;
   min-width: 18px;
   height: 18px;
   line-height: 18px;
 }
-.kuma-pagination-simple .kuma-pagination-current {
+.kuma-page-simple .kuma-page-current {
   color: #ff9900;
 }
-.kuma-pagination-simple .kuma-pagination-simple-pager {
+.kuma-page-simple .kuma-page-simple-pager {
   float: left;
   margin-right: 8px;
   line-height: 18px;
   font-weight: bold;
 }
-.kuma-pagination-simple .kuma-pagination-simple-pager input {
+.kuma-page-simple .kuma-page-simple-pager input {
   margin: 0 8px;
   background-color: #ffffff;
   border: 1px solid #d9d9d9;
@@ -166,51 +166,51 @@
   min-height: 20px;
   text-align: center;
 }
-.kuma-pagination-simple .kuma-pagination-simple-pager input:hover {
+.kuma-page-simple .kuma-page-simple-pager input:hover {
   border-color: #ff9900;
 }
-.kuma-pagination.mini .kuma-pagination-prev,
-.kuma-pagination.mini .kuma-pagination-next,
-.kuma-pagination.mini .kuma-pagination-jump-prev,
-.kuma-pagination.mini .kuma-pagination-jump-next {
+.kuma-page.mini .kuma-page-prev,
+.kuma-page.mini .kuma-page-next,
+.kuma-page.mini .kuma-page-jump-prev,
+.kuma-page.mini .kuma-page-jump-next {
   font-size: 10px;
   min-width: 18px;
   height: 18px;
   line-height: 18px;
 }
-.kuma-pagination.mini .kuma-pagination-item {
+.kuma-page.mini .kuma-page-item {
   margin-right: 6px;
   min-width: 18px;
   height: 18px;
   line-height: 18px;
 }
-.kuma-pagination.mini .kuma-pagination-options .kuma-pagination-options-quick-jumper {
+.kuma-page.mini .kuma-page-options .kuma-page-options-quick-jumper {
   margin-left: 8px;
   height: 18px;
   line-height: 18px;
 }
-.kuma-pagination.mini .kuma-pagination-options .kuma-pagination-options-quick-jumper input {
+.kuma-page.mini .kuma-page-options .kuma-page-options-quick-jumper input {
   width: 36px;
   height: 18px;
 }
-.kuma-pagination.mini .kuma-pagination-options .kuma-pagination-options-quick-jumper input:hover {
+.kuma-page.mini .kuma-page-options .kuma-page-options-quick-jumper input:hover {
   border-color: #ff9900;
 }
-.kuma-pagination.mini .kuma-pagination-options .kuma-pagination-options-size-changer .kuma-select-selection {
+.kuma-page.mini .kuma-page-options .kuma-page-options-size-changer .kuma-select2-selection {
   height: 18px;
 }
-.kuma-pagination.mini .kuma-pagination-options .kuma-pagination-options-size-changer .kuma-select-selection .kuma-select-selection__rendered {
+.kuma-page.mini .kuma-page-options .kuma-page-options-size-changer .kuma-select2-selection .kuma-select2-selection__rendered {
   line-height: 18px;
 }
-.kuma-pagination.mini .kuma-pagination-options .kuma-pagination-options-size-changer .kuma-select-selection .kuma-select-arrow {
+.kuma-page.mini .kuma-page-options .kuma-page-options-size-changer .kuma-select2-selection .kuma-select2-arrow {
   height: 18px;
   margin-top: -5px;
 }
-.kuma-pagination-options-size-changer,
-.kuma-pagination-options-size-changer-dropdown {
+.kuma-page-options-size-changer,
+.kuma-page-options-size-changer-dropdown {
   font-size: 12px;
 }
-.kuma-pagination-options-size-changer-dropdown .kuma-select-dropdown-menu-item {
+.kuma-page-options-size-changer-dropdown .kuma-select-dropdown-menu-item {
   padding: 7px 16px 7px 11px;
 }
 
