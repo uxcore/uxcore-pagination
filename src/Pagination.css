@@ -206,11 +206,11 @@
   height: 18px;
   margin-top: -5px;
 }
-.kuma-page-options-size-changer,
-.kuma-page-options-size-changer-dropdown {
+.kuma-page .kuma-page-options-size-changer,
+.kuma-page .kuma-page-options-size-changer-dropdown {
   font-size: 12px;
 }
-.kuma-page-options-size-changer-dropdown .kuma-select2-dropdown-menu-item {
+.kuma-page .kuma-page-options-size-changer-dropdown .kuma-select2-dropdown-menu-item {
   padding: 7px 16px 7px 11px;
 }
 
