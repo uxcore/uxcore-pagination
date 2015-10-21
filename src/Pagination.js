@@ -41,6 +41,7 @@ class Pagination extends React.Component {
     if (nextProps.current != this.props.current) {
       this.setState({
         current: nextProps.current,
+        _current: nextProps.current
       });
     }
 

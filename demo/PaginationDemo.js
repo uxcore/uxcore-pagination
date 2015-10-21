@@ -30,7 +30,7 @@ export default class Demo extends React.Component {
 				<p>迷你版本:</p>
 				<Pagination className="mini" current={this.state.index} showQuickJumper={true} onChange={me.handleChange.bind(me)} total={50} sizeOptions={[5, 10, 20]} pageSize={5} showSizeChanger={true} />
 				<p>简单地翻页:</p>
-				<Pagination simple currnet={this.state.index} onChange={me.handleChange.bind(me)} total={50} pageSize={1} />
+				<Pagination simple onChange={me.handleChange.bind(me)} total={50} pageSize={1} />
 			</div>
 		);
 	}
