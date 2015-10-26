@@ -2,6 +2,10 @@
 
 ---
 
+## 0.1.7
+
+`FIXED` fix issue #6
+
 ## 0.1.6
 
 `FIXED` fix issue #7

@@ -52,6 +52,12 @@ class Pagination extends React.Component {
     }
   }
 
+  renderTotal() {
+    if (this.props.showTotal) {
+      return <li className={this.props.prefixCls + "-total"}>{`共${this.props.total}条`}</li>
+    }
+  }
+
   render() {
     const props = this.props;
 
@@ -139,6 +145,7 @@ class Pagination extends React.Component {
         <li title="Next Page" onClick={this._next} className={(this._hasNext() ? '' : `${prefixCls}-disabled `) + `${prefixCls}-next`}>
           <a></a>
         </li>
+        {this.renderTotal()}
         <Options rootPrefixCls={prefixCls}
           selectComponentClass={props.selectComponentClass}
           selectPrefixCls={props.selectPrefixCls}
@@ -268,6 +275,7 @@ class Pagination extends React.Component {
 Pagination.propTypes = {
   current: React.PropTypes.number,
   total: React.PropTypes.number,
+  showTotal: React.PropTypes.bool,
   pageSize: React.PropTypes.number,
   sizeOptions: React.PropTypes.array,
   onChange: React.PropTypes.func,
@@ -280,6 +288,7 @@ Pagination.propTypes = {
 Pagination.defaultProps = {
   current: 1,
   total: 0,
+  showTotal: false,
   pageSize: 10,
   sizeOptions: [10, 20, 30, 40],
   onChange: noop,
