@@ -125,7 +125,6 @@
     a {
       &:after {
         content: "‹";
-        display: block;
       }
     }
   }
@@ -134,7 +133,6 @@
     a {
       &:after {
         content: "›";
-        display: block;
       }
     }
   }
@@ -143,10 +141,11 @@
     border: 1px solid @pagination-item-border;
     font-size: 18px;
     a {
-      color: @pagination-item-text;
-      &:after {
-        margin-top: -1px;
-      }
+        color: @pagination-item-text;
+        &:after {
+            display: inline-block;
+            vertical-align: top;
+        }
     }
   }
 
@@ -166,24 +165,26 @@
     }
 
     &-quick-jumper {
-      float: left;
-      margin-left: 0px;
-      height: 28px;
-      line-height: 28px;
-
-      input {
-        margin: 0 8px;
-        background-color: @white;
-        border: 1px solid @pagination-item-border;
-        outline: none;
-        width: 50px;
+        margin-left: 0px;
         height: 28px;
-        text-align: center;
+        line-height: 28px;
 
-        &:hover {
-          border-color: @brand-primary;
+        input {
+            display: inline-block;
+            margin: 0 8px;
+            background-color: @white;
+            border: 1px solid @pagination-item-border;
+            outline: none;
+            width: 50px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            vertical-align: top;
+
+            &:hover {
+                border-color: @brand-primary;
+            }
         }
-      }
     }
   }
 
