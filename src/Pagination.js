@@ -78,10 +78,10 @@ class Pagination extends React.Component {
             {allPages}
           </div>
           <li title="Previous Page" onClick={this._prev} className={(this._hasPrev() ? '' : `${prefixCls}-disabled `) + `${prefixCls}-prev`}>
-            <a></a>
+            <a className="kuma-icon kuma-icon-chevron-left"></a>
           </li>
           <li title="Next Page" onClick={this._next} className={(this._hasNext() ? '' : `${prefixCls}-disabled `) + `${prefixCls}-next`}>
-            <a></a>
+            <a className="kuma-icon kuma-icon-chevron-right"></a>
           </li>
         </ul>
       );
@@ -139,11 +139,11 @@ class Pagination extends React.Component {
       <ul className={`${prefixCls} ${props.className}`}
         unselectable="unselectable">
         <li title="Previous Page" onClick={this._prev} className={(this._hasPrev() ? '' : `${prefixCls}-disabled `) + `${prefixCls}-prev`}>
-          <a></a>
+          <a className="kuma-icon kuma-icon-chevron-left"></a>
         </li>
         {pagerList}
         <li title="Next Page" onClick={this._next} className={(this._hasNext() ? '' : `${prefixCls}-disabled `) + `${prefixCls}-next`}>
-          <a></a>
+          <a className="kuma-icon kuma-icon-chevron-right"></a>
         </li>
         {this.renderTotal()}
         <Options rootPrefixCls={prefixCls}
