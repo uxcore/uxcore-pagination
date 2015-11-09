@@ -2,6 +2,9 @@
 
 ---
 
+## 0.1.8
+`CHANGED` change arrow with kuma-icon
+
 ## 0.1.7
 
 `FIXED` fix issue #6
