@@ -1,4 +1,5 @@
-const React = require('react');
+const React = require('react'); 
+const ReactDOM = require('react-dom');
 
 class Pager extends React.Component {
   render() {

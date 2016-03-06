@@ -1,4 +1,5 @@
-const React = require('react');
+const React = require('react'); 
+const ReactDOM = require('react-dom');
 const KEYCODE = require('./KeyCode');
 
 class Options extends React.Component {

@@ -7,6 +7,8 @@ const Select = require('uxcore-select2');
 const Pager = require('./Pager');
 const Options = require('./Options');
 const KEYCODE = require('./KeyCode');
+const React = require('react'); 
+const ReactDOM = require('react-dom');
 
 function noop() {
 }
