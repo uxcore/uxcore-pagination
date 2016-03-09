@@ -294,7 +294,7 @@ Pagination.propTypes = {
 Pagination.defaultProps = {
   current: 1,
   total: 0,
-  locale: 'en',
+  locale: 'zh-cn',
   showTotal: false,
   pageSize: 10,
   sizeOptions: [10, 20, 30, 40],
