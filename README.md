@@ -32,6 +32,7 @@ http://uxcore.github.io/uxcore/components/pagination/
 
 |参数|说明|类型|默认值|
 |---|----|---|------|
+|locale|语言(zh-cn/en-us)|string|zh-cn|
 |current|当前页数|number|1|
 |total|数据总数|number/jsx|0|
 |pageSize|每页条数|number|10|

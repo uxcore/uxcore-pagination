@@ -1,6 +1,7 @@
 const React = require('react'); 
 const ReactDOM = require('react-dom');
 const KEYCODE = require('./KeyCode');
+const i18n = require('./locale');
 
 class Options extends React.Component {
   constructor(props) {
@@ -40,7 +41,7 @@ class Options extends React.Component {
           defaultValue={sizeOptions.indexOf(pageSize) == -1 ? sizeOptions[0]+"" : pageSize+"" } 
           onChange={this._changeSize}>
           {sizeOptions.map((option, index) => {
-            return <Option key={option} value={option + ""}>{option + "条/页"}</Option>
+            return <Option key={option} value={option + ""}>{option + i18n[props.locale]['items_per_page']}</Option>
           })}
        </Select>
       );
@@ -49,9 +50,9 @@ class Options extends React.Component {
     if (quickGo) {
       goInput = (
         <div title="Quick jump to page" className={`${prefixCls}-quick-jumper`}>
-          跳至
+          {i18n[props.locale]['jump_to']}
           <input type="text" value={state._current} onChange={this._handleChange.bind(this)} onKeyUp={this._go.bind(this)}/>
-          页
+          {i18n[props.locale]['page']}
         </div>
       );
     }

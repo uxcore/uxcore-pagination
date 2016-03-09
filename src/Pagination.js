@@ -9,6 +9,7 @@ const Options = require('./Options');
 const KEYCODE = require('./KeyCode');
 const React = require('react'); 
 const ReactDOM = require('react-dom');
+const i18n = require('./locale');
 
 function noop() {
 }
@@ -55,8 +56,9 @@ class Pagination extends React.Component {
   }
 
   renderTotal() {
+    let prefix = this.props.locale == 'zh-cn' ? "共" : ""; 
     if (this.props.showTotal) {
-      return <li className={this.props.prefixCls + "-total"}>{`共${this.props.total}条`}</li>
+      return <li className={this.props.prefixCls + "-total"}>{prefix + this.props.total + i18n[this.props.locale]['item']}</li>
     }
   }
 
@@ -149,6 +151,7 @@ class Pagination extends React.Component {
         </li>
         {this.renderTotal()}
         <Options rootPrefixCls={prefixCls}
+          locale={props.locale}
           selectComponentClass={props.selectComponentClass}
           selectPrefixCls={props.selectPrefixCls}
           changeSize={this.props.showSizeChanger ? this._changePageSize.bind(this) : null}
@@ -277,6 +280,7 @@ class Pagination extends React.Component {
 Pagination.propTypes = {
   current: React.PropTypes.number,
   total: React.PropTypes.number,
+  locale: React.PropTypes.string,
   showTotal: React.PropTypes.bool,
   pageSize: React.PropTypes.number,
   sizeOptions: React.PropTypes.array,
@@ -290,6 +294,7 @@ Pagination.propTypes = {
 Pagination.defaultProps = {
   current: 1,
   total: 0,
+  locale: 'en',
   showTotal: false,
   pageSize: 10,
   sizeOptions: [10, 20, 30, 40],
