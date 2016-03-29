@@ -22,7 +22,7 @@ export default class Demo extends React.Component {
 		return (
 			<div>
 				<p>基础分页:</p>
-				<Pagination showSizeChanger={true} onChange={onChange} total={50} pageSize={8} />
+				<Pagination showSizeChanger={true} onChange={onChange} total={50} pageSize={8} locale='en' />
 				<p>更多分页:</p>
 				<Pagination onChange={onChange} total={500} />
 				<p>快速跳转到某一页:</p>
