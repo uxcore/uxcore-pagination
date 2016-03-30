@@ -41,7 +41,7 @@
     list-style: none;
     float: left;
     background-color: @pagination-item-bg;
-    transition: background-color 0.3s ease 0;
+    transition: background-color @transition-duration @transition-ease @transition-delay;
     a {
       text-decoration: none;
       color: @text-thirdary-color;
@@ -178,7 +178,7 @@
             vertical-align: top;
 
             &:hover {
-                border-color: @brand-primary;
+                border-color: @border-hover-color;
             }
         }
     }
@@ -212,7 +212,7 @@
         text-align: center;
 
         &:hover {
-          border-color: @brand-primary;
+          border-color: @border-hover-color;
         }
       }
 
@@ -252,7 +252,7 @@
                     line-height: 18px;
 
                     &:hover {
-                        border-color: @brand-primary;
+                        border-color: @border-hover-color;
                     }
                 }
             }
