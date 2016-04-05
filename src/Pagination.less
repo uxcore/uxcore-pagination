@@ -54,10 +54,10 @@
 
     &-active {
       a {
-        color: @text-primary-color;
+        color: @brand-primary;
       }
       &:hover {
-        color: @text-primary-color;
+        color: @brand-primary;
       }
     }
   }
@@ -157,6 +157,7 @@
     &-size-changer {
       float: left;
       width: 80px;
+      background-color: @basic-400;
     }
 
     &-quick-jumper {
@@ -176,6 +177,7 @@
             line-height: 34px;
             text-align: center;
             vertical-align: top;
+            background-color: @basic-400; 
 
             &:hover {
                 border-color: @border-hover-color;
@@ -227,11 +229,15 @@
             line-height: 16px;
         }
 
+        .@{paginationPrefix}-prev {
+          margin-right: 6px;
+        }
+
         .@{paginationPrefix}-item {
             margin-right: 6px;
             min-width: 18px;
             height: 18px;
-            line-height: 16px;
+            line-height: 18px;
         }
 
         .@{paginationPrefix}-total {
@@ -250,7 +256,7 @@
                     width: 36px;
                     height: 18px;
                     line-height: 18px;
-
+                    background-color: @basic-400;
                     &:hover {
                         border-color: @border-hover-color;
                     }
