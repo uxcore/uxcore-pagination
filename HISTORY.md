@@ -2,6 +2,10 @@
 
 ---
 
+## 0.2.0
+
+`NEW` new style
+
 ## 0.1.20
 
 `NEW` internationalization, now support 'zh-cn' & 'en-us'
