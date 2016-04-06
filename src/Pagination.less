@@ -157,7 +157,9 @@
     &-size-changer {
       float: left;
       width: 80px;
-      background-color: @basic-400;
+      .kuma-select2-selection {
+        background: @basic-400;
+      }
     }
 
     &-quick-jumper {
@@ -270,11 +272,13 @@
                 .kuma-select2-selection {
                     height: 18px;
                     .kuma-select2-selection__rendered {
-                        line-height: 18px;
+                        line-height: 16px;
+                        > span {
+                          vertical-align: middle;
+                        }
                     }
                     .kuma-select2-arrow {
-                        height: 18px;
-                        margin-top: -5px;
+                      line-height: 18px;
                     }
                 }
             }
