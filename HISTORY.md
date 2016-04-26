@@ -2,6 +2,10 @@
 
 ---
 
+## 0.2.2
+
+`CHANGED` update uxcore-select2 to ~0.2.0
+
 ## 0.2.0
 
 `NEW` new style
