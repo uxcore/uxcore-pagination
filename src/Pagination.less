@@ -6,9 +6,10 @@
  * All rights reserved.
  */
 
-@paginationPrefix: kuma-page;
+@__pagination-prefix-cls: kuma-page;
+@__select-prefix-cls: kuma-select2;
 
-.@{paginationPrefix} {
+.@{__pagination-prefix-cls} {
   font-size: 12px;
   font-family: 'Arial';
   user-select: none;
@@ -157,8 +158,11 @@
     &-size-changer {
       float: left;
       width: 80px;
-      .kuma-select2-selection {
+      .@{__select-prefix-cls}-selection {
         background: @basic-400;
+      }
+      .@{__select-prefix-cls}-selection-selected-value {
+        padding-right: 0px;
       }
     }
 
@@ -192,22 +196,22 @@
   }
 
   &-simple {
-    .@{paginationPrefix}-prev, .@{paginationPrefix}-next {
+    .@{__pagination-prefix-cls}-prev, .@{__pagination-prefix-cls}-next {
         font-size: 10px;
         min-width: 18px;
         height: 18px;
         line-height: 16px;
     }
 
-    .@{paginationPrefix}-prev {
+    .@{__pagination-prefix-cls}-prev {
       margin-right: 4px;
     }
 
-    .@{paginationPrefix}-current {
+    .@{__pagination-prefix-cls}-current {
         color: @brand-primary;
     }
 
-    .@{paginationPrefix}-simple-pager {
+    .@{__pagination-prefix-cls}-simple-pager {
       float: left;
       margin-right: 8px;
       line-height: 18px;
@@ -231,32 +235,32 @@
   }
 
     &.mini {
-        .@{paginationPrefix}-prev, .@{paginationPrefix}-next, .@{paginationPrefix}-jump-prev, .@{paginationPrefix}-jump-next {
+        .@{__pagination-prefix-cls}-prev, .@{__pagination-prefix-cls}-next, .@{__pagination-prefix-cls}-jump-prev, .@{__pagination-prefix-cls}-jump-next {
             font-size: 10px;
             min-width: 18px;
             height: 18px;
             line-height: 16px;
         }
 
-        .@{paginationPrefix}-prev {
+        .@{__pagination-prefix-cls}-prev {
           margin-right: 6px;
         }
 
-        .@{paginationPrefix}-item {
+        .@{__pagination-prefix-cls}-item {
             margin-right: 6px;
             min-width: 18px;
             height: 18px;
             line-height: 18px;
         }
 
-        .@{paginationPrefix}-total {
+        .@{__pagination-prefix-cls}-total {
             height: 18px;
             line-height: 18px;
             min-height: 18px;
         }
 
-        .@{paginationPrefix}-options {
-            .@{paginationPrefix}-options-quick-jumper {
+        .@{__pagination-prefix-cls}-options {
+            .@{__pagination-prefix-cls}-options-quick-jumper {
                 margin-left: 8px;
                 height: 18px;
                 line-height: 18px;
@@ -274,16 +278,16 @@
                     }
                 }
             }
-            .@{paginationPrefix}-options-size-changer {
-                .kuma-select2-selection {
+            .@{__pagination-prefix-cls}-options-size-changer {
+                .@{__select-prefix-cls}-selection {
                     height: 18px;
-                    .kuma-select2-selection__rendered {
+                    .@{__select-prefix-cls}-selection__rendered {
                         line-height: 16px;
                         > span {
                           vertical-align: middle;
                         }
                     }
-                    .kuma-select2-arrow {
+                    .@{__select-prefix-cls}-arrow {
                       height: 14px;
                       line-height: 14px;
                     }
@@ -294,16 +298,16 @@
     }
 }
 
-.@{paginationPrefix} {
-  .@{paginationPrefix}-options-size-changer {
+.@{__pagination-prefix-cls} {
+  .@{__pagination-prefix-cls}-options-size-changer {
     font-size: 12px;
   }
 }
-.@{paginationPrefix}-options-size-changer-dropdown {
+.@{__pagination-prefix-cls}-options-size-changer-dropdown {
   font-size: 12px;
 }
-.@{paginationPrefix}-options-size-changer-dropdown {
-  .kuma-select2-dropdown-menu-item {
+.@{__pagination-prefix-cls}-options-size-changer-dropdown {
+  .@{__select-prefix-cls}-dropdown-menu-item {
     padding: 7px 16px 7px 11px;
   }
 }

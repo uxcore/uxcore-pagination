@@ -2,6 +2,11 @@
 
 ---
 
+## 0.2.3
+
+`FIXED` fix pagination size changer style bug
+`CHANGED` new scaffold
+
 ## 0.2.2
 
 `CHANGED` update uxcore-select2 to ~0.2.0
