@@ -2,6 +2,10 @@
 
 ---
 
+## 0.2.4
+
+`CHANGED` update dependency `uxcore-select` to ~0.3.0
+
 ## 0.2.3
 
 `FIXED` fix pagination size changer style bug

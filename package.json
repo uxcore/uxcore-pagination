@@ -1,6 +1,6 @@
 {
  "name": "uxcore-pagination",
- "version": "0.2.3",
+ "version": "0.2.4",
  "description": "pagination ui component for react",
  "main": "build/index.js",
  "scripts": {
@@ -45,7 +45,7 @@
  "dependencies": {
   "classnames": "^2.1.5",
   "object-assign": "^4.0.0",
-  "uxcore-select2": "~0.2.0"
+  "uxcore-select2": "~0.3.0"
  },
  "author": "",
  "contributors": [],
