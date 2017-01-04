@@ -2,6 +2,10 @@
 
 ---
 
+## 0.3.0
+
+`CHANGED` update `uxcore-select` to ~0.4.0
+
 ## 0.2.4
 
 `CHANGED` update dependency `uxcore-select` to ~0.3.0
