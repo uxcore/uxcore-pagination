@@ -2,6 +2,10 @@
 
 ---
 
+## 0.3.1
+
+`NEW` add new Prop `getSelectPopupContainer`
+
 ## 0.3.0
 
 `CHANGED` update `uxcore-select` to ~0.4.0

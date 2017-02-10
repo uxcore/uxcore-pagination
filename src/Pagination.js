@@ -154,6 +154,7 @@ class Pagination extends React.Component {
           ref={options => this.options = options}
           locale={props.locale}
           selectComponentClass={props.selectComponentClass}
+          getPopupContainer={props.getSelectPopupContainer}
           selectPrefixCls={props.selectPrefixCls}
           changeSize={this.props.showSizeChanger ? this._changePageSize.bind(this) : null}
           current={this.state.current}
@@ -177,37 +178,6 @@ class Pagination extends React.Component {
   _isValid(page) {
     return typeof page === 'number' && page >= 1 && page !== this.state.current;
   }
-
-  // _handleKeyDown(evt) {
-  //   if (evt.keyCode === KEYCODE.ARROW_UP || evt.keyCode === KEYCODE.ARROW_DOWN) {
-  //     evt.preventDefault();
-  //   }
-  // }
-
-  // _handleKeyUp(evt) {
-  //   const _val = evt.target.value;
-  //   let val;
-
-  //   if (_val === '') {
-  //     val = _val;
-  //   } else if (isNaN(Number(_val))) {
-  //     val = this.state._current;
-  //   } else {
-  //     val = Number(_val);
-  //   }
-
-  //   this.setState({
-  //     _current: val,
-  //   });
-
-  //   if (evt.keyCode === KEYCODE.ENTER) {
-  //     this._handleChange(val);
-  //   } else if (evt.keyCode === KEYCODE.ARROW_UP) {
-  //     this._handleChange(val - 1);
-  //   } else if (evt.keyCode === KEYCODE.ARROW_DOWN) {
-  //     this._handleChange(val + 1);
-  //   }
-  // }
 
   _changePageSize(size) {
     if (typeof size === 'number') {

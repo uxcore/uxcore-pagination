@@ -36,6 +36,7 @@ class Options extends React.Component {
         <Select
           prefixCls={props.selectPrefixCls} showSearch={false}
           className={`${prefixCls}-size-changer`}
+          getPopupContainer={props.getPopupContainer}
           optionLabelProp="children"
           dropdownClassName={`${prefixCls}-size-changer-dropdown`}
           defaultValue={sizeOptions.indexOf(pageSize) == -1 ? sizeOptions[0]+"" : pageSize+"" } 
