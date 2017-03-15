@@ -52,7 +52,7 @@ class Options extends React.Component {
       goInput = (
         <div title="Quick jump to page" className={`${prefixCls}-quick-jumper`}>
           {i18n[props.locale]['jump_to']}
-          <input type="text" value={state._current} onChange={this._handleChange.bind(this)} onKeyUp={this._go.bind(this)}/>
+          <input type="text" className="kuma-input" value={state._current} onChange={this._handleChange.bind(this)} onKeyUp={this._go.bind(this)}/>
           {i18n[props.locale]['page']}
         </div>
       );

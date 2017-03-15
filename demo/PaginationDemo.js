@@ -21,7 +21,7 @@ export default class Demo extends React.Component {
 		let me = this;
 		return (
 			<div>
-				<p>基础分页:</p>
+				<h2>基础分页:</h2>
 				<Pagination 
 					showSizeChanger={true} 
 					onChange={onChange} 
@@ -35,14 +35,16 @@ export default class Demo extends React.Component {
 						return div;
 					}} 
 				/>
-				<p>更多分页:</p>
+				<h2>更多分页:</h2>
 				<Pagination onChange={onChange} total={500} />
-				<p>快速跳转到某一页:</p>
+				<h2>快速跳转到某一页:</h2>
 				<Pagination showQuickJumper={true} onChange={onChange} total={500}/>
-				<p>迷你版本:</p>
+				<h2>迷你版本:</h2>
 				<Pagination className="mini" current={this.state.index} showTotal={true} showQuickJumper={true} onChange={me.handleChange.bind(me)} total={50} sizeOptions={[5, 10, 20]} pageSize={5} showSizeChanger={true} />
-				<p>简单地翻页:</p>
+				<h2>简单地翻页:</h2>
 				<Pagination simple onChange={me.handleChange.bind(me)} total={50} pageSize={1} />
+				<h2>总数未知</h2>
+				<Pagination simple onChange={me.handleChange.bind(me)} pageSize={1} />
 			</div>
 		);
 	}
