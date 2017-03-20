@@ -2,6 +2,11 @@
 
 ---
 
+## 0.4.0
+
+`CHANGED` new style
+`NEW` add new style for unknown total
+
 ## 0.3.1
 
 `NEW` add new Prop `getSelectPopupContainer`
