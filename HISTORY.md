@@ -2,10 +2,14 @@
 
 ---
 
+## 0.4.1
+
+`CHANGED` style change
+
 ## 0.4.0
 
-`CHANGED` new style
-`NEW` add new style for unknown total
+* `CHANGED` new style
+* `NEW` add new style for unknown total
 
 ## 0.3.1
 

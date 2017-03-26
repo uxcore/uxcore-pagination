@@ -145,7 +145,8 @@
   &-disabled {
     cursor: @cursor-disabled;
     background-color: @normal-alpha-8;
-    border-color: @normal-alpha-8;
+    border: none;
+    line-height: 28px;
     a {
       color: @normal-alpha-6;
     }
@@ -165,12 +166,12 @@
       width: 80px;
       .@{__select-prefix-cls}-selection {
         height: 28px;
+        .@{__select-prefix-cls}-selection__rendered {
+          line-height: 26px;
+        }
       }
       .@{__select-prefix-cls}-selection-selected-value {
         padding-right: 0px;
-      }
-      .@{__select-prefix-cls}-selection__rendered {
-        line-height: 26px;
       }
       .@{__select-prefix-cls}-arrow {
         height: 26px;
@@ -208,6 +209,9 @@
       min-width: 18px;
       height: 18px;
       line-height: 16px;
+    }
+    .@{__pagination-prefix-cls}-disabled {
+      line-height: 18px;
     }
     .@{__pagination-prefix-cls}-prev {
       margin-right: 4px;
@@ -248,6 +252,9 @@
     .@{__pagination-prefix-cls}-prev,
     .@{__pagination-prefix-cls}-jump-next {
       margin-right: 6px;
+    }
+    .@{__pagination-prefix-cls}-disabled {
+      line-height: 18px;
     }
     .@{__pagination-prefix-cls}-item {
       margin-right: 6px;

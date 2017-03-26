@@ -77,13 +77,13 @@ class Pagination extends React.Component {
       return (
         <ul className={`${prefixCls} ${props.className}`}>
           <li title="Previous Page" onClick={this._prev} className={(this._hasPrev() ? '' : `${prefixCls}-disabled `) + `${prefixCls}-prev`}>
-            <a className="kuma-icon kuma-icon-triangle-left"></a>
+            <a className="kuma-icon kuma-icon-chevron-left"></a>
           </li>
           <div title={`Page ${this.state.current}`} className={`${prefixCls}-unknown-total`}>
             <span className={`${prefixCls}-current`}>{this.state._current}</span>
           </div>
           <li title="Next Page" onClick={this._next} className={(this._hasNext() ? '' : `${prefixCls}-disabled `) + `${prefixCls}-next`}>
-            <a className="kuma-icon kuma-icon-triangle-right"></a>
+            <a className="kuma-icon kuma-icon-chevron-right"></a>
           </li>
         </ul>
       )
@@ -93,7 +93,7 @@ class Pagination extends React.Component {
       return (
         <ul className={`${prefixCls} ${prefixCls}-simple ${props.className}`}>
           <li title="Previous Page" onClick={this._prev} className={(this._hasPrev() ? '' : `${prefixCls}-disabled `) + `${prefixCls}-prev`}>
-            <a className="kuma-icon kuma-icon-triangle-left"></a>
+            <a className="kuma-icon kuma-icon-chevron-left"></a>
           </li>
           <div title={`Page ${this.state.current} of ${allPages}`} className={`${prefixCls}-simple-pager`}>
             <span className={`${prefixCls}-current`}>{this.state._current}</span>
@@ -101,7 +101,7 @@ class Pagination extends React.Component {
             {allPages}
           </div>
           <li title="Next Page" onClick={this._next} className={(this._hasNext() ? '' : `${prefixCls}-disabled `) + `${prefixCls}-next`}>
-            <a className="kuma-icon kuma-icon-triangle-right"></a>
+            <a className="kuma-icon kuma-icon-chevron-right"></a>
           </li>
         </ul>
       );
