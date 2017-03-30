@@ -2,6 +2,10 @@
 
 ---
 
+## 0.5.0
+
+`CHANGED` adjust quick jumper position
+
 ## 0.4.1
 
 `CHANGED` style change
