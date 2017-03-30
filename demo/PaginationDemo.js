@@ -23,8 +23,9 @@ export default class Demo extends React.Component {
 			<div>
 				<h2>基础分页:</h2>
 				<Pagination 
-					showSizeChanger={true} 
+					showSizeChanger
 					onChange={onChange} 
+					showQuickJumper
 					total={50} 
 					pageSize={8} 
 					locale='en' 
