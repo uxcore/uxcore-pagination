@@ -2,6 +2,11 @@
 
 ---
 
+## 0.5.2
+
+* `CHANGED` add i18n for unknown total
+* `FIXED` incorrect style
+
 ## 0.5.0
 
 `CHANGED` adjust quick jumper position

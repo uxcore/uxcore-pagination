@@ -25,7 +25,7 @@
     font-size: 10px;
     min-width: 28px;
     height: 28px;
-    line-height: 26px;
+    line-height: 28px;
     float: left;
     margin-right: 12px;
     -webkit-user-select: auto;
@@ -73,27 +73,24 @@
       content: "•••";
       display: block;
       letter-spacing: 2px;
-      color: #ccc;
+      color: @normal-alpha-4;
       font-size: 12px;
       margin-top: 1px;
-    }
-    &:hover {
-      &:after {
-        background-color: @brand-primary-lighter;
-      }
     }
   }
   &-jump-prev {
     &:hover {
       &:after {
-        content: "«";
+        font-family: "uxcore";
+        content: "\e65e";
       }
     }
   }
   &-jump-next {
     &:hover {
       &:after {
-        content: "»";
+        font-family: "uxcore";
+        content: "\e65f";
       }
     }
   }
@@ -103,7 +100,7 @@
   &-jump-next {
     transition: background-color 0.2s ease,  color 0.2s ease, border-color 0.2s ease;
     cursor: pointer;
-    color: @text-thirdary-color;
+    color: @normal-alpha-4;
     font-size: 10px;
     list-style: none;
     min-width: 28px;
@@ -129,7 +126,7 @@
     border-radius: @global-border-radius;
     font-size: 18px;
     a {
-      color: @gray-lighter;
+      color: @normal-alpha-4;
       &:after {
         display: inline-block;
         vertical-align: top;

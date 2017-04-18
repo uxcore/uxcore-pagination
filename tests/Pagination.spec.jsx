@@ -1,8 +1,6 @@
 import expect from 'expect.js';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import assign from 'object-assign';
-import TestUtils, { Simulate } from 'react-addons-test-utils';
 import { mount } from 'enzyme';
 import Pagination from '../src';
 
@@ -22,7 +20,6 @@ function renderPageWithProps(pageProps) {
 
 describe('Pagination', () => {
   describe('render', () => {
-
     it('should render correctly', (done) => {
       const wrapper = renderPageWithProps();
       expect(wrapper.find('.test-page').length).to.be(1);
@@ -37,7 +34,7 @@ describe('Pagination', () => {
     });
     it('should set page correctly', (done) => {
       expect(wrapper.node.state.current).to.be(1);
-      wrapper.node._handleChange(2)
+      wrapper.node._handleChange(2);
       expect(wrapper.node.state.current).to.be(2);
       done();
       wrapper.node._next();
@@ -56,15 +53,12 @@ describe('Pagination', () => {
     it('should quick jumper work correctly', (done) => {
       const input = wrapper.find('.kuma-page-options-quick-jumper > input');
       input.node.value = 10;
-      input.simulate('change')
+      input.simulate('change');
       input.simulate('keyup', {
         keyCode: 13,
       });
       expect(wrapper.node.state.current).to.be(10);
       done();
     });
-
   });
-  
-
 });
