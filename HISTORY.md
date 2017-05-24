@@ -2,6 +2,11 @@
 
 ---
 
+## 0.6.0
+
+* `CHANGED` add quick jumper button 
+* `CHANGED` quick jumper input value follow the current page
+
 ## 0.5.2
 
 * `CHANGED` add i18n for unknown total

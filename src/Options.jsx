@@ -1,4 +1,5 @@
 const React = require('react');
+const Button = require('uxcore-button');
 const KEYCODE = require('./KeyCode');
 const i18n = require('./locale');
 
@@ -8,12 +9,26 @@ class Options extends React.Component {
 
     this.state = {
       current: props.current,
-      _current: props.current,
     };
 
-    ['_handleChange', '_changeSize', '_go'].forEach((method) => {
+    ['_handleChange', '_changeSize', '_go', 'handleButtonClick'].forEach((method) => {
       this[method] = this[method].bind(this);
       return null;
+    });
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      current: nextProps.current,
+    });
+  }
+
+  handleButtonClick() {
+    this._go({
+      target: {
+        value: this.state.current,
+      },
+      keyCode: KEYCODE.ENTER,
     });
   }
 
@@ -26,23 +41,22 @@ class Options extends React.Component {
     const _val = evt.target.value;
 
     this.setState({
-      _current: _val,
+      current: _val,
     });
   }
 
   _go(e) {
-    const _val = e.target.value;
+    let _val = e.target.value;
     if (_val === '') {
       return;
     }
-    let val = Number(this.state._current);
-    if (isNaN(val)) {
-      val = this.state.current;
+    _val = Number(_val);
+    if (isNaN(_val)) {
+      return;
     }
     if (e.keyCode === KEYCODE.ENTER) {
-      const c = this.props.quickGo(val);
+      const c = this.props.quickGo(_val);
       this.setState({
-        _current: c,
         current: c,
       });
     }
@@ -87,8 +101,20 @@ class Options extends React.Component {
       goInput = (
         <div title="Quick jump to page" className={`${prefixCls}-quick-jumper`}>
           {i18n[props.locale].jump_to}
-          <input type="text" className="kuma-input" value={state._current} onChange={this._handleChange.bind(this)} onKeyUp={this._go.bind(this)} />
+          <input
+            type="text"
+            className="kuma-input"
+            value={state.current}
+            onChange={this._handleChange.bind(this)}
+            onKeyUp={this._go.bind(this)}
+          />
           {i18n[props.locale].page}
+          <Button
+            type="secondary"
+            size="small"
+            className={`${prefixCls}-quick-jumper-button`}
+            onClick={this.handleButtonClick}
+          >{i18n[props.locale].ok}</Button>
         </div>
       );
     }

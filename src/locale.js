@@ -6,6 +6,7 @@ const locale = {
     total: total => `${total} entries`,
     item: ' entries',
     pageNo: page => `Page ${page}`,
+    ok: 'Ok',
   },
   'zh-cn': {
     items_per_page: '条/页',
@@ -14,6 +15,7 @@ const locale = {
     total: total => `共${total}条`,
     item: '条',
     pageNo: page => `第${page}页`,
+    ok: '确定',
   },
 };
 locale.en = locale['en-us'];
