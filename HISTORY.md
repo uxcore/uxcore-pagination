@@ -2,6 +2,10 @@
 
 ---
 
+## 0.6.1
+
+* `CHANGED` improve style when total count is large
+
 ## 0.6.0
 
 * `CHANGED` add quick jumper button 

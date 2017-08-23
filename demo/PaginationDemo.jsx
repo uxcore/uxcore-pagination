@@ -44,9 +44,9 @@ export default class Demo extends React.Component {
         <h2>更多分页:</h2>
         <Pagination onChange={onChange} total={500} showTotal locale="en-us" />
         <h2>快速跳转到某一页:</h2>
-        <Pagination showQuickJumper onChange={onChange} total={500} />
+        <Pagination showQuickJumper onChange={onChange} total={500000} />
         <h2>迷你版本:</h2>
-        <Pagination className="mini" current={this.state.index} showTotal showQuickJumper onChange={me.handleChange.bind(me)} total={50} sizeOptions={[5, 10, 20]} pageSize={5} showSizeChanger />
+        <Pagination className="mini" current={this.state.index} showTotal showQuickJumper onChange={me.handleChange.bind(me)} total={5000} sizeOptions={[5, 10, 20]} pageSize={5} showSizeChanger />
         <h2>简单地翻页:</h2>
         <Pagination simple onChange={me.handleChange.bind(me)} total={50} pageSize={1} />
         <h2>总数未知</h2>
