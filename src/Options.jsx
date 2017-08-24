@@ -1,7 +1,7 @@
-const React = require('react');
-const Button = require('uxcore-button');
-const KEYCODE = require('./KeyCode');
-const i18n = require('./locale');
+import React from 'react';
+import Button from 'uxcore-button';
+import KEYCODE from './KeyCode';
+import i18n from './locale';
 
 class Options extends React.Component {
   constructor(props) {
@@ -135,4 +135,4 @@ Options.propTypes = {
   current: React.PropTypes.number,
 };
 
-module.exports = Options;
+export default Options;

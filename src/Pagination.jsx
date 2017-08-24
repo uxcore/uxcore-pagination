@@ -3,11 +3,12 @@
  * @maintainer eternalsky
  */
 
-const Select = require('uxcore-select2');
-const Pager = require('./Pager');
-const Options = require('./Options');
-const React = require('react');
-const i18n = require('./locale');
+import Select from 'uxcore-select2';
+
+import Pager from './Pager';
+import Options from './Options';
+import React from 'react';
+import i18n from './locale';
 
 function noop() {
 }
@@ -334,4 +335,4 @@ Pagination.defaultProps = {
 
 Pagination.displayName = 'Pagination';
 
-module.exports = Pagination;
+export default Pagination;

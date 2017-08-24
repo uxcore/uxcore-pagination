@@ -1,5 +1,5 @@
-const React = require('react'); 
-const ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 class Pager extends React.Component {
   render() {
@@ -33,4 +33,4 @@ Pager.propTypes = {
   last: React.PropTypes.bool,
 };
 
-module.exports = Pager;
+export default Pager;

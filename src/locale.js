@@ -20,4 +20,4 @@ const locale = {
 };
 locale.en = locale['en-us'];
 
-module.exports = locale;
+export default locale;
