@@ -3,11 +3,11 @@
  * @maintainer eternalsky
  */
 
+import React from 'react';
 import Select from 'uxcore-select2';
 
 import Pager from './Pager';
 import Options from './Options';
-import React from 'react';
 import i18n from './locale';
 
 function noop() {
@@ -221,14 +221,20 @@ class Pagination extends React.Component {
       );
       lastPager = (
         <Pager
-          last rootPrefixCls={prefixCls}
+          last
+          rootPrefixCls={prefixCls}
           onClick={this._handleChange.bind(this, allPages)}
-          key={allPages} page={allPages} active={false}
+          key={allPages}
+          page={allPages}
+          active={false}
         />);
       firstPager = (
         <Pager
-          rootPrefixCls={prefixCls} onClick={this._handleChange.bind(this, 1)}
-          key={1} page={1} active={false}
+          rootPrefixCls={prefixCls}
+          onClick={this._handleChange.bind(this, 1)}
+          key={1}
+          page={1}
+          active={false}
         />
       );
 
@@ -249,8 +255,11 @@ class Pagination extends React.Component {
         const active = current === i;
         pagerList.push(
           <Pager
-            rootPrefixCls={prefixCls} onClick={this._handleChange.bind(this, i)}
-            key={i} page={i} active={active}
+            rootPrefixCls={prefixCls}
+            onClick={this._handleChange.bind(this, i)}
+            key={i}
+            page={i}
+            active={active}
           />
         );
       }

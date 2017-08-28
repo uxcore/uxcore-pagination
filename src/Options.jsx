@@ -82,7 +82,8 @@ class Options extends React.Component {
       const Option = Select.Option;
       changeSelect = (
         <Select
-          prefixCls={props.selectPrefixCls} showSearch={false}
+          prefixCls={props.selectPrefixCls}
+          showSearch={false}
           className={`${prefixCls}-size-changer`}
           getPopupContainer={props.getPopupContainer}
           optionLabelProp="children"
@@ -128,11 +129,13 @@ class Options extends React.Component {
   }
 }
 
+/* eslint-disable react/require-default-props */
 Options.propTypes = {
   changeSize: React.PropTypes.func,
   quickGo: React.PropTypes.func,
   selectComponentClass: React.PropTypes.func,
   current: React.PropTypes.number,
 };
+/* eslint-enable react/require-default-props */
 
 export default Options;

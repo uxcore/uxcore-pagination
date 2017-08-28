@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 class Pager extends React.Component {
   render() {
@@ -15,9 +14,9 @@ class Pager extends React.Component {
     if (props.page === 1) {
       title = 'First Page';
     } else if (props.last) {
-      title = ('Last Page: ' + props.page);
+      title = (`Last Page: ${props.page}`);
     } else {
-      title = ('Page ' + props.page);
+      title = (`Page ${props.page}`);
     }
     return (
       <li title={title} className={cls} onClick={props.onClick}>
@@ -31,6 +30,12 @@ Pager.propTypes = {
   page: React.PropTypes.number,
   active: React.PropTypes.bool,
   last: React.PropTypes.bool,
+};
+
+Pager.defaultProps = {
+  page: 0,
+  active: false,
+  last: false,
 };
 
 export default Pager;
