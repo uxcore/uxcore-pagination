@@ -92,7 +92,9 @@ class Options extends React.Component {
           onChange={this._changeSize}
         >
           {sizeOptions.map(option => (
-            <Option key={option} value={`${option}`}>{option + i18n[props.locale].items_per_page}</Option>
+            <Option key={option} value={`${option}`}>
+              {option + i18n[props.locale].items_per_page}
+            </Option>
           ))}
         </Select>
       );

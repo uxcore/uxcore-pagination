@@ -18,9 +18,9 @@ class Pagination extends React.Component {
     super(props);
 
     this.state = {
-      current: props.current,
-      _current: props.current,
-      pageSize: props.pageSize,
+      current: Math.floor(props.current),
+      _current: Math.floor(props.current),
+      pageSize: Math.floor(props.pageSize),
     };
 
     [
@@ -64,10 +64,11 @@ class Pagination extends React.Component {
     if (typeof pageSize === 'undefined') {
       pageSize = this.state.pageSize;
     }
-    if ([0, undefined, null].indexOf(this.props.total) !== -1) {
+    const total = Math.floor(this.props.total);
+    if ([0, undefined, null].indexOf(total) !== -1) {
       return Infinity;
     }
-    return Math.floor((this.props.total - 1) / pageSize) + 1;
+    return Math.floor((total - 1) / pageSize) + 1;
   }
 
   _isValid(page) {
@@ -145,7 +146,7 @@ class Pagination extends React.Component {
   renderTotal() {
     const { locale, total } = this.props;
     if (this.props.showTotal) {
-      return <li className={`${this.props.prefixCls}-total`}>{i18n[locale].total(total)}</li>;
+      return <li className={`${this.props.prefixCls}-total`}>{i18n[locale].total(Math.floor(total))}</li>;
     }
     return null;
   }
@@ -161,7 +162,7 @@ class Pagination extends React.Component {
     let firstPager = null;
     let lastPager = null;
 
-    if ([0, undefined, null].indexOf(props.total) !== -1) {
+    if ([0, undefined, null].indexOf(Math.floor(props.total)) !== -1) {
       return (
         <ul className={`${prefixCls} ${props.className}`}>
           <li title="Previous Page" onClick={this._prev} className={`${this._hasPrev() ? '' : `${prefixCls}-disabled `}${prefixCls}-prev`}>

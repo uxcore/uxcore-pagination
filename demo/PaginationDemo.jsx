@@ -1,3 +1,4 @@
+/* eslint no-console: "off" */
 import React from 'react';
 import Pagination from '../src/index';
 
@@ -30,7 +31,7 @@ export default class Demo extends React.Component {
           showSizeChanger
           onChange={onChange}
           showQuickJumper
-          total={50}
+          total={50.9}
           pageSize={8}
           locale="en"
           getSelectPopupContainer={() => {
