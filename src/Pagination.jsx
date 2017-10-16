@@ -9,6 +9,7 @@ import Select from 'uxcore-select2';
 import Pager from './Pager';
 import Options from './Options';
 import i18n from './locale';
+import PropTypes from 'prop-types';
 
 function noop() {
 }
@@ -312,18 +313,18 @@ class Pagination extends React.Component {
 }
 
 Pagination.propTypes = {
-  current: React.PropTypes.number,
-  total: React.PropTypes.number,
-  locale: React.PropTypes.string,
-  prefixCls: React.PropTypes.string,
-  showTotal: React.PropTypes.bool,
-  pageSize: React.PropTypes.number,
-  sizeOptions: React.PropTypes.array,
-  onChange: React.PropTypes.func,
-  showSizeChanger: React.PropTypes.bool,
-  onShowSizeChange: React.PropTypes.func,
-  selectComponentClass: React.PropTypes.func,
-  showQuickJumper: React.PropTypes.bool,
+  current: PropTypes.number,
+  total: PropTypes.number,
+  locale: PropTypes.string,
+  prefixCls: PropTypes.string,
+  showTotal: PropTypes.bool,
+  pageSize: PropTypes.number,
+  sizeOptions: PropTypes.array,
+  onChange: PropTypes.func,
+  showSizeChanger: PropTypes.bool,
+  onShowSizeChange: PropTypes.func,
+  selectComponentClass: PropTypes.func,
+  showQuickJumper: PropTypes.bool,
 };
 
 Pagination.defaultProps = {

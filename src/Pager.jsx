@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Pager extends React.Component {
   render() {
@@ -27,9 +28,9 @@ class Pager extends React.Component {
 }
 
 Pager.propTypes = {
-  page: React.PropTypes.number,
-  active: React.PropTypes.bool,
-  last: React.PropTypes.bool,
+  page: PropTypes.number,
+  active: PropTypes.bool,
+  last: PropTypes.bool,
 };
 
 Pager.defaultProps = {

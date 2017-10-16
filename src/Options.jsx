@@ -2,6 +2,7 @@ import React from 'react';
 import Button from 'uxcore-button';
 import KEYCODE from './KeyCode';
 import i18n from './locale';
+import PropTypes from 'prop-types';
 
 class Options extends React.Component {
   constructor(props) {
@@ -133,10 +134,10 @@ class Options extends React.Component {
 
 /* eslint-disable react/require-default-props */
 Options.propTypes = {
-  changeSize: React.PropTypes.func,
-  quickGo: React.PropTypes.func,
-  selectComponentClass: React.PropTypes.func,
-  current: React.PropTypes.number,
+  changeSize: PropTypes.func,
+  quickGo: PropTypes.func,
+  selectComponentClass: PropTypes.func,
+  current: PropTypes.number,
 };
 /* eslint-enable react/require-default-props */
 

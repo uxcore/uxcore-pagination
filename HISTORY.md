@@ -1,6 +1,9 @@
 # History
 
 ---
+## 0.6.2  
+
+* `CHANGED` Migrate to react 15.x
 
 ## 0.6.1
 
