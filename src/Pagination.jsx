@@ -18,10 +18,14 @@ class Pagination extends React.Component {
   constructor(props) {
     super(props);
 
+    const current = Math.floor(props.current);
+    const pageSize = Math.floor(props.pageSize);
     this.state = {
-      current: Math.floor(props.current),
-      _current: Math.floor(props.current),
-      pageSize: Math.floor(props.pageSize),
+      current,
+      _current: current,
+      lastCurrent: current,
+      pageSize,
+      lastPageSize: pageSize,
     };
 
     [
@@ -43,19 +47,36 @@ class Pagination extends React.Component {
     });
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.current !== this.props.current) {
-      this.setState({
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps.current !== this.props.current) {
+  //     this.setState({
+  //       current: nextProps.current,
+  //       _current: nextProps.current,
+  //     });
+  //   }
+
+  //   if (nextProps.pageSize !== this.props.pageSize) {
+  //     this.setState({
+  //       pageSize: nextProps.pageSize,
+  //     });
+  //   }
+  // }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if(nextProps.current !== prevState.lastCurrent) {
+      return Object.assign({}, prevState, {
         current: nextProps.current,
         _current: nextProps.current,
+        lastCurrent: nextProps.current,
       });
     }
-
-    if (nextProps.pageSize !== this.props.pageSize) {
-      this.setState({
+    if(nextProps.pageSize !== prevState.lastPageSize) {
+      return Object.assign({}, prevState, {
         pageSize: nextProps.pageSize,
+        lastPageSize: nextProps.pageSize,
       });
     }
+    return null;
   }
 
   // private methods

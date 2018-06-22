@@ -10,6 +10,7 @@ class Options extends React.Component {
 
     this.state = {
       current: props.current,
+      lastCurrent: props.current,
     };
 
     ['_handleChange', '_changeSize', '_go', 'handleButtonClick'].forEach((method) => {
@@ -18,10 +19,20 @@ class Options extends React.Component {
     });
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({
-      current: nextProps.current,
-    });
+  // componentWillReceiveProps(nextProps) {
+  //   this.setState({
+  //     current: nextProps.current,
+  //   });
+  // }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if(nextProps.current !== prevState.lastCurrent) {
+      return Object.assign({}, prevState, {
+        current: nextProps.current,
+        lastCurrent: nextProps.current,
+      });
+    }
+    return null;
   }
 
   handleButtonClick() {
