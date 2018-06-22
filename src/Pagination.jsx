@@ -10,6 +10,7 @@ import Pager from './Pager';
 import Options from './Options';
 import i18n from './locale';
 import PropTypes from 'prop-types';
+import { polyfill } from 'react-lifecycles-compat';
 
 function noop() {
 }
@@ -366,5 +367,7 @@ Pagination.defaultProps = {
 };
 
 Pagination.displayName = 'Pagination';
+
+polyfill(Pagination);
 
 export default Pagination;

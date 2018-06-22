@@ -3,6 +3,7 @@ import Button from 'uxcore-button';
 import KEYCODE from './KeyCode';
 import i18n from './locale';
 import PropTypes from 'prop-types';
+import { polyfill } from 'react-lifecycles-compat';
 
 class Options extends React.Component {
   constructor(props) {
@@ -151,5 +152,7 @@ Options.propTypes = {
   current: PropTypes.number,
 };
 /* eslint-enable react/require-default-props */
+
+polyfill(Options);
 
 export default Options;
