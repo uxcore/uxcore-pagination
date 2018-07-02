@@ -16,6 +16,28 @@ function noop() {
 }
 
 class Pagination extends React.Component {
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.current !== prevState.lastCurrent) {
+      return {
+        current: nextProps.current,
+        _current: nextProps.current,
+        lastCurrent: nextProps.current,
+        pageSize: prevState.pageSize,
+        lastPageSize: prevState.lastPageSize,
+      };
+    }
+    if (nextProps.pageSize !== prevState.lastPageSize) {
+      return {
+        current: prevState.current,
+        _current: prevState.current,
+        lastCurrent: prevState.current,
+        pageSize: nextProps.pageSize,
+        lastPageSize: nextProps.pageSize,
+      };
+    }
+    return null;
+  }
+
   constructor(props) {
     super(props);
 
@@ -46,38 +68,6 @@ class Pagination extends React.Component {
       this[method] = this[method].bind(this);
       return null;
     });
-  }
-
-  // componentWillReceiveProps(nextProps) {
-  //   if (nextProps.current !== this.props.current) {
-  //     this.setState({
-  //       current: nextProps.current,
-  //       _current: nextProps.current,
-  //     });
-  //   }
-
-  //   if (nextProps.pageSize !== this.props.pageSize) {
-  //     this.setState({
-  //       pageSize: nextProps.pageSize,
-  //     });
-  //   }
-  // }
-
-  static getDerivedStateFromProps(nextProps, prevState) {
-    if(nextProps.current !== prevState.lastCurrent) {
-      return Object.assign({}, prevState, {
-        current: nextProps.current,
-        _current: nextProps.current,
-        lastCurrent: nextProps.current,
-      });
-    }
-    if(nextProps.pageSize !== prevState.lastPageSize) {
-      return Object.assign({}, prevState, {
-        pageSize: nextProps.pageSize,
-        lastPageSize: nextProps.pageSize,
-      });
-    }
-    return null;
   }
 
   // private methods

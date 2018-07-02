@@ -6,6 +6,16 @@ import PropTypes from 'prop-types';
 import { polyfill } from 'react-lifecycles-compat';
 
 class Options extends React.Component {
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.current !== prevState.lastCurrent) {
+      return {
+        current: nextProps.current,
+        lastCurrent: nextProps.current,
+      };
+    }
+    return null;
+  }
+
   constructor(props) {
     super(props);
 
@@ -18,22 +28,6 @@ class Options extends React.Component {
       this[method] = this[method].bind(this);
       return null;
     });
-  }
-
-  // componentWillReceiveProps(nextProps) {
-  //   this.setState({
-  //     current: nextProps.current,
-  //   });
-  // }
-
-  static getDerivedStateFromProps(nextProps, prevState) {
-    if(nextProps.current !== prevState.lastCurrent) {
-      return Object.assign({}, prevState, {
-        current: nextProps.current,
-        lastCurrent: nextProps.current,
-      });
-    }
-    return null;
   }
 
   handleButtonClick() {
