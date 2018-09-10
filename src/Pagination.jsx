@@ -10,18 +10,45 @@ import Pager from './Pager';
 import Options from './Options';
 import i18n from './locale';
 import PropTypes from 'prop-types';
+import { polyfill } from 'react-lifecycles-compat';
 
 function noop() {
 }
 
 class Pagination extends React.Component {
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.current !== prevState.lastCurrent) {
+      return {
+        current: nextProps.current,
+        _current: nextProps.current,
+        lastCurrent: nextProps.current,
+        pageSize: prevState.pageSize,
+        lastPageSize: prevState.lastPageSize,
+      };
+    }
+    if (nextProps.pageSize !== prevState.lastPageSize) {
+      return {
+        current: prevState.current,
+        _current: prevState.current,
+        lastCurrent: prevState.current,
+        pageSize: nextProps.pageSize,
+        lastPageSize: nextProps.pageSize,
+      };
+    }
+    return null;
+  }
+
   constructor(props) {
     super(props);
 
+    const current = Math.floor(props.current);
+    const pageSize = Math.floor(props.pageSize);
     this.state = {
-      current: Math.floor(props.current),
-      _current: Math.floor(props.current),
-      pageSize: Math.floor(props.pageSize),
+      current,
+      _current: current,
+      lastCurrent: current,
+      pageSize,
+      lastPageSize: pageSize,
     };
 
     [
@@ -41,21 +68,6 @@ class Pagination extends React.Component {
       this[method] = this[method].bind(this);
       return null;
     });
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.current !== this.props.current) {
-      this.setState({
-        current: nextProps.current,
-        _current: nextProps.current,
-      });
-    }
-
-    if (nextProps.pageSize !== this.props.pageSize) {
-      this.setState({
-        pageSize: nextProps.pageSize,
-      });
-    }
   }
 
   // private methods
@@ -345,5 +357,7 @@ Pagination.defaultProps = {
 };
 
 Pagination.displayName = 'Pagination';
+
+polyfill(Pagination);
 
 export default Pagination;

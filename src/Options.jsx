@@ -3,24 +3,30 @@ import Button from 'uxcore-button';
 import KEYCODE from './KeyCode';
 import i18n from './locale';
 import PropTypes from 'prop-types';
+import { polyfill } from 'react-lifecycles-compat';
 
 class Options extends React.Component {
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.current !== prevState.lastCurrent) {
+      return {
+        current: nextProps.current,
+        lastCurrent: nextProps.current,
+      };
+    }
+    return null;
+  }
+
   constructor(props) {
     super(props);
 
     this.state = {
       current: props.current,
+      lastCurrent: props.current,
     };
 
     ['_handleChange', '_changeSize', '_go', 'handleButtonClick'].forEach((method) => {
       this[method] = this[method].bind(this);
       return null;
-    });
-  }
-
-  componentWillReceiveProps(nextProps) {
-    this.setState({
-      current: nextProps.current,
     });
   }
 
@@ -140,5 +146,7 @@ Options.propTypes = {
   current: PropTypes.number,
 };
 /* eslint-enable react/require-default-props */
+
+polyfill(Options);
 
 export default Options;
