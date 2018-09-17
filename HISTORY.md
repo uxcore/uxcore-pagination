@@ -1,6 +1,10 @@
 # History
 
 ---
+## 0.7.1
+
+* `CHANGED` modify i18n text
+
 ## 0.7.0
 
 * `CHANGED` Migrate to react 16.x
