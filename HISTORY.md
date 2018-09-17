@@ -1,6 +1,7 @@
 # History
 
 ---
+
 ## 0.7.1
 
 * `CHANGED` modify i18n text
