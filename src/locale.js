@@ -1,12 +1,12 @@
 const locale = {
   'en-us': {
     items_per_page: '/page',
-    jump_to: 'Goto',
+    jump_to: 'page',
     page: '',
-    total: total => `${total} entries`,
+    total: total => `Total ${total} items`,
     item: ' entries',
     pageNo: page => `Page ${page}`,
-    ok: 'Ok',
+    ok: 'Go',
   },
   'zh-cn': {
     items_per_page: '条/页',
