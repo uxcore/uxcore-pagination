@@ -2,6 +2,10 @@
 
 ---
 
+## 0.7.2
+
+* `CHANGED` support js style export
+
 ## 0.7.1
 
 * `CHANGED` modify i18n text
