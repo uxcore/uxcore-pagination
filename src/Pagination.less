@@ -6,9 +6,9 @@
  * All rights reserved.
  */
 
-@__pagination-prefix-cls: kuma-page;
+@__paginationPrefixCls: kuma-page;
 @__select-prefix-cls: kuma-select2;
-.@{__pagination-prefix-cls} {
+.@{__paginationPrefixCls} {
   font-size: 12px;
   font-family: 'Arial';
   user-select: none;
@@ -203,24 +203,24 @@
     }
   }
   &-simple {
-    .@{__pagination-prefix-cls}-prev,
-    .@{__pagination-prefix-cls}-next {
+    .@{__paginationPrefixCls}-prev,
+    .@{__paginationPrefixCls}-next {
       font-size: 10px;
       min-width: 18px;
       height: 18px;
       line-height: 16px;
     }
-    .@{__pagination-prefix-cls}-disabled {
+    .@{__paginationPrefixCls}-disabled {
       line-height: 18px;
     }
-    .@{__pagination-prefix-cls}-prev {
+    .@{__paginationPrefixCls}-prev {
       margin-right: 4px;
     }
-    .@{__pagination-prefix-cls}-current {
+    .@{__paginationPrefixCls}-current {
       color: @normal-alpha-2;
       margin-right: 1px;
     }
-    .@{__pagination-prefix-cls}-simple-pager {
+    .@{__paginationPrefixCls}-simple-pager {
       float: left;
       margin-right: 8px;
       margin-left: 4px;
@@ -240,23 +240,23 @@
     }
   }
   &.mini {
-    .@{__pagination-prefix-cls}-prev,
-    .@{__pagination-prefix-cls}-next,
-    .@{__pagination-prefix-cls}-jump-prev,
-    .@{__pagination-prefix-cls}-jump-next {
+    .@{__paginationPrefixCls}-prev,
+    .@{__paginationPrefixCls}-next,
+    .@{__paginationPrefixCls}-jump-prev,
+    .@{__paginationPrefixCls}-jump-next {
       font-size: 10px;
       min-width: 18px;
       height: 18px;
       line-height: 16px;
     }
-    .@{__pagination-prefix-cls}-prev,
-    .@{__pagination-prefix-cls}-jump-next {
+    .@{__paginationPrefixCls}-prev,
+    .@{__paginationPrefixCls}-jump-next {
       margin-right: 6px;
     }
-    .@{__pagination-prefix-cls}-disabled {
+    .@{__paginationPrefixCls}-disabled {
       line-height: 18px;
     }
-    .@{__pagination-prefix-cls}-item {
+    .@{__paginationPrefixCls}-item {
       margin-right: 6px;
       min-width: 18px;
       height: 18px;
@@ -265,13 +265,13 @@
         margin: 0 3px;
       }
     }
-    .@{__pagination-prefix-cls}-total {
+    .@{__paginationPrefixCls}-total {
       height: 18px;
       line-height: 18px;
       min-height: 18px;
     }
-    .@{__pagination-prefix-cls}-options {
-      .@{__pagination-prefix-cls}-options-quick-jumper {
+    .@{__paginationPrefixCls}-options {
+      .@{__paginationPrefixCls}-options-quick-jumper {
         height: 18px;
         line-height: 18px;
         input {
@@ -290,7 +290,7 @@
           line-height: 18px;
         }
       }
-      .@{__pagination-prefix-cls}-options-size-changer {
+      .@{__paginationPrefixCls}-options-size-changer {
         .@{__select-prefix-cls}-selection {
           height: 18px;
           .@{__select-prefix-cls}-selection__rendered {
@@ -309,24 +309,24 @@
   }
 }
 
-.@{__pagination-prefix-cls} {
-  .@{__pagination-prefix-cls}-options-size-changer {
+.@{__paginationPrefixCls} {
+  .@{__paginationPrefixCls}-options-size-changer {
     font-size: 12px;
     margin-right: 12px;
   }
 }
 
-.@{__pagination-prefix-cls}-options-size-changer-dropdown {
+.@{__paginationPrefixCls}-options-size-changer-dropdown {
   font-size: 12px;
 }
 
-.@{__pagination-prefix-cls}-options-size-changer-dropdown {
+.@{__paginationPrefixCls}-options-size-changer-dropdown {
   .@{__select-prefix-cls}-dropdown-menu-item {
     padding: 7px 16px 7px 11px;
   }
 }
 
-.@{__pagination-prefix-cls}-unknown-total {
+.@{__paginationPrefixCls}-unknown-total {
   float: left;
   line-height: 28px;
   padding: 0 16px 0 8px;
