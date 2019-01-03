@@ -2,6 +2,10 @@
 
 ---
 
+## 0.7.6
+
+* `CHANGED` add `maxUnfoldedLength` Props API
+
 ## 0.7.2
 
 * `CHANGED` support js style export
