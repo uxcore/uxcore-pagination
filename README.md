@@ -61,4 +61,5 @@ http://uxcore.github.io/uxcore/components/pagination/
 |onShowSizeChange|pageSize 变化的回调|function|noop|
 |className|当为「mini」时，是小尺寸分页|string||
 |simple|当添加该属性时，显示为简单分页|object|无|
+|pageShowCount|页码显示的数量，更多的使用...代替|Number|5|
 |getSelectPopupContainer|指定下拉选择框渲染的容器|function():HTML Element|插在 body 下的一个 div|
