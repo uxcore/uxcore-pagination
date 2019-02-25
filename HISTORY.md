@@ -1,15 +1,10 @@
 # History
 
 ---
-## 0.7.7
-
-* `NEW` add `pageShowCount` Props API
-* `CHANGED` change name `maxUnfoldedLength` to `pageShowCount`
-* `FIXED` [issue 30](https://github.com/uxcore/uxcore-pagination/issues/30)
-
 ## 0.7.6
 
-* `CHANGED` add `maxUnfoldedLength` Props API
+* `NEW` add `pageShowCount` Props API
+* `FIXED` [issue 30](https://github.com/uxcore/uxcore-pagination/issues/30)
 
 ## 0.7.2
 

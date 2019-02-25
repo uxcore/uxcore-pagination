@@ -67,8 +67,8 @@
       }
     }
   }
-  &-jump-prev,
-  &-jump-next {
+  &-jump-prev-icon,
+  &-jump-next-icon {
     margin-right: 8px;
     .uxicon-more-dot {
       display: block;
@@ -79,11 +79,8 @@
     .uxicon-right_double {
       display: none;
     }
-    &:after {
-      content: "";
-    }
   }
-  &-jump-prev {
+  &-jump-prev-icon {
     &:hover {
       .uxicon-more-dot {
         display: none;
@@ -91,14 +88,9 @@
       .uxicon-left_double {
         display: block;
       }
-      &:hover {
-        &:after {
-          content: "";
-        }
-      }
     }
   }
-  &-jump-next {
+  &-jump-next-icon {
     &:hover {
       .uxicon-more-dot {
         display: none;
@@ -106,15 +98,12 @@
       .uxicon-right_double {
         display: block;
       }
-      &:after {
-        content: "";
-      }
     }
   }
-  &-prev,
-  &-next,
-  &-jump-prev,
-  &-jump-next {
+  &-prev-icon,
+  &-next-icon,
+  &-jump-prev-icon,
+  &-jump-next-icon {
     transition: background-color 0.2s ease,  color 0.2s ease, border-color 0.2s ease;
     cursor: pointer;
     color: @normal-alpha-4;
@@ -126,19 +115,19 @@
     float: left;
     text-align: center;
   }
-  &-prev {
+  &-prev-icon {
     margin-right: 8px;
     a {
       text-decoration: none;
     }
   }
-  &-next {
+  &-next-icon {
     a {
       text-decoration: none;
     }
   }
-  &-prev,
-  &-next {
+  &-prev-icon,
+  &-next-icon {
     border: 1px solid @border-color;
     border-radius: @global-border-radius;
     font-size: 18px;
@@ -219,8 +208,12 @@
     }
   }
   &-simple {
-    .@{__paginationPrefixCls}-prev,
-    .@{__paginationPrefixCls}-next {
+    .uxcore-icon {
+      font-size: 12px;
+      line-height: 18px;
+    }
+    .@{__paginationPrefixCls}-prev-icon,
+    .@{__paginationPrefixCls}-next-icon {
       font-size: 10px;
       min-width: 18px;
       height: 18px;
@@ -256,17 +249,21 @@
     }
   }
   &.mini {
-    .@{__paginationPrefixCls}-prev,
-    .@{__paginationPrefixCls}-next,
-    .@{__paginationPrefixCls}-jump-prev,
-    .@{__paginationPrefixCls}-jump-next {
+    .uxcore-icon {
+      font-size: 12px;
+      line-height: 18px;
+    }
+    .@{__paginationPrefixCls}-prev-icon,
+    .@{__paginationPrefixCls}-next-icon,
+    .@{__paginationPrefixCls}-jump-prev-icon,
+    .@{__paginationPrefixCls}-jump-next-icon {
       font-size: 10px;
       min-width: 18px;
       height: 18px;
       line-height: 16px;
     }
     .@{__paginationPrefixCls}-prev,
-    .@{__paginationPrefixCls}-jump-next {
+    .@{__paginationPrefixCls}-jump-next-icon {
       margin-right: 6px;
     }
     .@{__paginationPrefixCls}-disabled {
