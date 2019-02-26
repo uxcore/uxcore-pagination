@@ -32,7 +32,7 @@ export default class Demo extends React.Component {
           showQuickJumper
           total={50.9}
           pageSize={8}
-          maxUnfoldedLength={5}
+          pageShowCount={6}
           locale="en"
           getSelectPopupContainer={() => {
             const div = document.createElement('div');
