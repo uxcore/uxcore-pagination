@@ -179,13 +179,13 @@ class Pagination extends React.Component {
     if ([0, undefined, null].indexOf(Math.floor(props.total)) !== -1) {
       return (
         <ul className={`${prefixCls} ${props.className}`}>
-          <li title="Previous Page" onClick={this._prev} className={`${this._hasPrev() ? '' : `${prefixCls}-disabled `}${prefixCls}-prev-icon`}>
+          <li title="Previous Page" onClick={this._prev} className={`${this._hasPrev() ? '' : `${prefixCls}-disabled `}${prefixCls}-prev`}>
             <Icon usei name="left" />
           </li>
           <div title={`Page ${this.state.current}`} className={`${prefixCls}-unknown-total`}>
             <span className={`${prefixCls}-current`}>{i18n[props.locale].pageNo(this.state._current)}</span>
           </div>
-          <li title="Next Page" onClick={this._next} className={`${this._hasNext() ? '' : `${prefixCls}-disabled `}${prefixCls}-next-icon`}>
+          <li title="Next Page" onClick={this._next} className={`${this._hasNext() ? '' : `${prefixCls}-disabled `}${prefixCls}-next`}>
             <Icon usei name="right" />
           </li>
         </ul>
@@ -195,7 +195,7 @@ class Pagination extends React.Component {
     if (props.simple) {
       return (
         <ul className={`${prefixCls} ${prefixCls}-simple ${props.className}`}>
-          <li title="Previous Page" onClick={this._prev} className={`${this._hasPrev() ? '' : `${prefixCls}-disabled `}${prefixCls}-prev-icon`}>
+          <li title="Previous Page" onClick={this._prev} className={`${this._hasPrev() ? '' : `${prefixCls}-disabled `}${prefixCls}-prev`}>
             <Icon usei name="left" />
           </li>
           <div title={`Page ${this.state.current} of ${allPages}`} className={`${prefixCls}-simple-pager`}>
@@ -203,7 +203,7 @@ class Pagination extends React.Component {
             <span className={`${prefixCls}-slash`}>/</span>
             {allPages}
           </div>
-          <li title="Next Page" onClick={this._next} className={`${this._hasNext() ? '' : `${prefixCls}-disabled `}${prefixCls}-next-icon`}>
+          <li title="Next Page" onClick={this._next} className={`${this._hasNext() ? '' : `${prefixCls}-disabled `}${prefixCls}-next`}>
             <Icon usei name="right" />
           </li>
         </ul>
@@ -225,13 +225,13 @@ class Pagination extends React.Component {
       }
     } else {
       jumpPrev = (
-        <li title="Previous 5 Page" key="prev" onClick={this._jumpPrev} className={`${prefixCls}-jump-prev-icon`}>
+        <li title="Previous 5 Page" key="prev" onClick={this._jumpPrev} className={`${prefixCls}-jump-prev`}>
           <Icon usei name="more-dot" />
           <Icon usei name="left_double" />
         </li>
       );
       jumpNext = (
-        <li title="Next 5 Page" key="next" onClick={this._jumpNext} className={`${prefixCls}-jump-next-icon`}>
+        <li title="Next 5 Page" key="next" onClick={this._jumpNext} className={`${prefixCls}-jump-next`}>
           <Icon usei name="more-dot" />
           <Icon usei name="right_double" />
         </li>
@@ -302,11 +302,11 @@ class Pagination extends React.Component {
         unselectable="unselectable"
       >
         {this.renderTotal()}
-        <li title="Previous Page" onClick={this._prev} className={`${this._hasPrev() ? '' : `${prefixCls}-disabled `}${prefixCls}-prev-icon`}>
+        <li title="Previous Page" onClick={this._prev} className={`${this._hasPrev() ? '' : `${prefixCls}-disabled `}${prefixCls}-prev`}>
           <Icon usei name="left" />
         </li>
         {pagerList}
-        <li title="Next Page" onClick={this._next} className={`${this._hasNext() ? '' : `${prefixCls}-disabled `}${prefixCls}-next-icon`}>
+        <li title="Next Page" onClick={this._next} className={`${this._hasNext() ? '' : `${prefixCls}-disabled `}${prefixCls}-next`}>
           <Icon usei name="right" />
         </li>
         <Options

@@ -67,8 +67,8 @@
       }
     }
   }
-  &-jump-prev-icon,
-  &-jump-next-icon {
+  &-jump-prev,
+  &-jump-next {
     margin-right: 8px;
     .uxicon-more-dot {
       display: block;
@@ -80,7 +80,7 @@
       display: none;
     }
   }
-  &-jump-prev-icon {
+  &-jump-prev {
     &:hover {
       .uxicon-more-dot {
         display: none;
@@ -90,7 +90,7 @@
       }
     }
   }
-  &-jump-next-icon {
+  &-jump-next {
     &:hover {
       .uxicon-more-dot {
         display: none;
@@ -100,10 +100,10 @@
       }
     }
   }
-  &-prev-icon,
-  &-next-icon,
-  &-jump-prev-icon,
-  &-jump-next-icon {
+  &-prev,
+  &-next,
+  &-jump-prev,
+  &-jump-next {
     transition: background-color 0.2s ease,  color 0.2s ease, border-color 0.2s ease;
     cursor: pointer;
     color: @normal-alpha-4;
@@ -115,19 +115,19 @@
     float: left;
     text-align: center;
   }
-  &-prev-icon {
+  &-prev {
     margin-right: 8px;
     a {
       text-decoration: none;
     }
   }
-  &-next-icon {
+  &-next {
     a {
       text-decoration: none;
     }
   }
-  &-prev-icon,
-  &-next-icon {
+  &-prev,
+  &-next {
     border: 1px solid @border-color;
     border-radius: @global-border-radius;
     font-size: 18px;
@@ -212,8 +212,8 @@
       font-size: 12px;
       line-height: 18px;
     }
-    .@{__paginationPrefixCls}-prev-icon,
-    .@{__paginationPrefixCls}-next-icon {
+    .@{__paginationPrefixCls}-prev,
+    .@{__paginationPrefixCls}-next {
       font-size: 10px;
       min-width: 18px;
       height: 18px;
@@ -253,17 +253,17 @@
       font-size: 12px;
       line-height: 18px;
     }
-    .@{__paginationPrefixCls}-prev-icon,
-    .@{__paginationPrefixCls}-next-icon,
-    .@{__paginationPrefixCls}-jump-prev-icon,
-    .@{__paginationPrefixCls}-jump-next-icon {
+    .@{__paginationPrefixCls}-prev,
+    .@{__paginationPrefixCls}-next,
+    .@{__paginationPrefixCls}-jump-prev,
+    .@{__paginationPrefixCls}-jump-next {
       font-size: 10px;
       min-width: 18px;
       height: 18px;
       line-height: 16px;
     }
     .@{__paginationPrefixCls}-prev,
-    .@{__paginationPrefixCls}-jump-next-icon {
+    .@{__paginationPrefixCls}-jump-next {
       margin-right: 6px;
     }
     .@{__paginationPrefixCls}-disabled {
