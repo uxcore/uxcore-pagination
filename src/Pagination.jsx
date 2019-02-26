@@ -210,7 +210,7 @@ class Pagination extends React.Component {
       );
     }
 
-    if (allPages <= props.pageShowCount) {
+    if (allPages <= props.maxUnfoldedLength) {
       for (let i = 1; i <= allPages; i++) {
         const active = this.state.current === i;
         pagerList.push(
@@ -340,7 +340,7 @@ Pagination.propTypes = {
   onShowSizeChange: PropTypes.func,
   selectComponentClass: PropTypes.func,
   showQuickJumper: PropTypes.bool,
-  pageShowCount: PropTypes.number,
+  maxUnfoldedLength: PropTypes.number,
 };
 
 Pagination.defaultProps = {
@@ -358,7 +358,7 @@ Pagination.defaultProps = {
   showQuickJumper: false,
   showSizeChanger: false,
   onShowSizeChange: noop,
-  pageShowCount: 9,
+  maxUnfoldedLength: 9,
 };
 
 Pagination.displayName = 'Pagination';

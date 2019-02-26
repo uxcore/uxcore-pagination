@@ -1,10 +1,14 @@
 # History
 
 ---
+
+## 0.7.7
+
+* `FIXED` [issue 30](https://github.com/uxcore/uxcore-pagination/issues/30)
+
 ## 0.7.6
 
-* `NEW` add `pageShowCount` Props API
-* `FIXED` [issue 30](https://github.com/uxcore/uxcore-pagination/issues/30)
+* `NEW` add `maxUnfoldedLength` Props API
 
 ## 0.7.2
 
