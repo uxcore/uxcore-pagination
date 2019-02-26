@@ -70,28 +70,33 @@
   &-jump-prev,
   &-jump-next {
     margin-right: 8px;
-    &:after {
-      content: "•••";
+    .uxicon-more-dot {
       display: block;
-      letter-spacing: 2px;
-      color: @normal-alpha-4;
-      font-size: 12px;
-      margin-top: 1px;
+    }
+    .uxicon-left_double {
+      display: none;
+    }
+    .uxicon-right_double {
+      display: none;
     }
   }
   &-jump-prev {
     &:hover {
-      &:after {
-        font-family: "uxcore";
-        content: "\e65e";
+      .uxicon-more-dot {
+        display: none;
+      }
+      .uxicon-left_double {
+        display: block;
       }
     }
   }
   &-jump-next {
     &:hover {
-      &:after {
-        font-family: "uxcore";
-        content: "\e65f";
+      .uxicon-more-dot {
+        display: none;
+      }
+      .uxicon-right_double {
+        display: block;
       }
     }
   }
@@ -203,6 +208,10 @@
     }
   }
   &-simple {
+    .uxcore-icon {
+      font-size: 12px;
+      line-height: 18px;
+    }
     .@{__paginationPrefixCls}-prev,
     .@{__paginationPrefixCls}-next {
       font-size: 10px;
@@ -240,6 +249,10 @@
     }
   }
   &.mini {
+    .uxcore-icon {
+      font-size: 12px;
+      line-height: 18px;
+    }
     .@{__paginationPrefixCls}-prev,
     .@{__paginationPrefixCls}-next,
     .@{__paginationPrefixCls}-jump-prev,

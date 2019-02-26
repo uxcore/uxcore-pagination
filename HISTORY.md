@@ -2,6 +2,14 @@
 
 ---
 
+## 0.7.7
+
+* `FIXED` [issue 30](https://github.com/uxcore/uxcore-pagination/issues/30)
+
+## 0.7.6
+
+* `NEW` add `maxUnfoldedLength` Props API
+
 ## 0.7.2
 
 * `CHANGED` support js style export
