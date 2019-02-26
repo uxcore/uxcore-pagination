@@ -8,7 +8,7 @@
 
 ## 0.7.6
 
-* `NEW` add `maxUnfoldedLength` Props API
+* `NEW` add `pageShowCount` Props API
 
 ## 0.7.2
 

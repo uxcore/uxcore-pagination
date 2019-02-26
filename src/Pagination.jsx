@@ -4,14 +4,13 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import { polyfill } from 'react-lifecycles-compat';
 import Select from 'uxcore-select2';
-
+import Icon from 'uxcore-icon';
 import Pager from './Pager';
 import Options from './Options';
 import i18n from './locale';
-import PropTypes from 'prop-types';
-import { polyfill } from 'react-lifecycles-compat';
-import Icon from 'uxcore-icon'
 
 function noop() {
 }
@@ -210,18 +209,17 @@ class Pagination extends React.Component {
       );
     }
 
-    if (allPages <= props.maxUnfoldedLength) {
+    const pageShowCount = props.pageShowCount || props.maxUnfoldedLength || 9;
+    if (allPages <= pageShowCount) {
       for (let i = 1; i <= allPages; i++) {
         const active = this.state.current === i;
-        pagerList.push(
-          <Pager
-            rootPrefixCls={prefixCls}
-            onClick={this._handleChange.bind(this, i)}
-            key={i}
-            page={i}
-            active={active}
-          />
-        );
+        pagerList.push(<Pager
+          rootPrefixCls={prefixCls}
+          onClick={this._handleChange.bind(this, i)}
+          key={i}
+          page={i}
+          active={active}
+        />);
       }
     } else {
       jumpPrev = (
@@ -270,15 +268,13 @@ class Pagination extends React.Component {
 
       for (let i = left; i <= right; i++) {
         const active = current === i;
-        pagerList.push(
-          <Pager
-            rootPrefixCls={prefixCls}
-            onClick={this._handleChange.bind(this, i)}
-            key={i}
-            page={i}
-            active={active}
-          />
-        );
+        pagerList.push(<Pager
+          rootPrefixCls={prefixCls}
+          onClick={this._handleChange.bind(this, i)}
+          key={i}
+          page={i}
+          active={active}
+        />);
       }
 
       if (current - 1 >= 4) {
@@ -340,7 +336,7 @@ Pagination.propTypes = {
   onShowSizeChange: PropTypes.func,
   selectComponentClass: PropTypes.func,
   showQuickJumper: PropTypes.bool,
-  maxUnfoldedLength: PropTypes.number,
+  pageShowCount: PropTypes.number,
 };
 
 Pagination.defaultProps = {
@@ -358,7 +354,7 @@ Pagination.defaultProps = {
   showQuickJumper: false,
   showSizeChanger: false,
   onShowSizeChange: noop,
-  maxUnfoldedLength: 9,
+  pageShowCount: undefined,
 };
 
 Pagination.displayName = 'Pagination';

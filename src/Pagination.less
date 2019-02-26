@@ -8,6 +8,7 @@
 
 @__paginationPrefixCls: kuma-page;
 @__select-prefix-cls: kuma-select2;
+
 .@{__paginationPrefixCls} {
   font-size: 12px;
   font-family: 'Arial';
@@ -67,8 +68,54 @@
       }
     }
   }
+  &-prev,
+  &-next,
   &-jump-prev,
   &-jump-next {
+    transition: background-color 0.2s ease,  color 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+    color: @normal-alpha-4;
+    font-size: 10px;
+    list-style: none;
+    height: 28px;
+    line-height: 26px;
+    float: left;
+    text-align: center;
+  }
+  &-prev {
+    margin-right: 8px;
+    a {
+      text-decoration: none;
+    }
+  }
+  &-next {
+    a {
+      text-decoration: none;
+    }
+  }
+  &-prev,
+  &-next {
+    min-width: 28px;
+    border: 1px solid @border-color;
+    border-radius: @global-border-radius;
+    font-size: 18px;
+    a {
+      color: @normal-alpha-4;
+      &:after {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+    &:hover {
+      border-color: @brand-primary;
+      a {
+        color: @brand-primary;
+      }
+    }
+  }
+  &-jump-prev,
+  &-jump-next {
+    width: 16px;
     margin-right: 8px;
     .uxicon-more-dot {
       display: block;
@@ -97,51 +144,6 @@
       }
       .uxicon-right_double {
         display: block;
-      }
-    }
-  }
-  &-prev,
-  &-next,
-  &-jump-prev,
-  &-jump-next {
-    transition: background-color 0.2s ease,  color 0.2s ease, border-color 0.2s ease;
-    cursor: pointer;
-    color: @normal-alpha-4;
-    font-size: 10px;
-    list-style: none;
-    min-width: 28px;
-    height: 28px;
-    line-height: 26px;
-    float: left;
-    text-align: center;
-  }
-  &-prev {
-    margin-right: 8px;
-    a {
-      text-decoration: none;
-    }
-  }
-  &-next {
-    a {
-      text-decoration: none;
-    }
-  }
-  &-prev,
-  &-next {
-    border: 1px solid @border-color;
-    border-radius: @global-border-radius;
-    font-size: 18px;
-    a {
-      color: @normal-alpha-4;
-      &:after {
-        display: inline-block;
-        vertical-align: top;
-      }
-    }
-    &:hover {
-      border-color: @brand-primary;
-      a {
-        color: @brand-primary;
       }
     }
   }

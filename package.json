@@ -1,6 +1,6 @@
 {
   "name": "uxcore-pagination",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "description": "pagination ui component for react",
   "main": "build/index.js",
   "scripts": {
