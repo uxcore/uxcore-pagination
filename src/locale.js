@@ -1,7 +1,7 @@
 const locale = {
   'en-us': {
-    items_per_page: '/Page',
-    jump_to: 'Page',
+    items_per_page: '/page',
+    jump_to: 'page',
     page: '',
     total: total => `Total ${total} items`,
     item: ' entries',
@@ -12,9 +12,9 @@ const locale = {
     items_per_page: '条/页',
     jump_to: '跳至',
     page: '页',
-    total: total => `共 ${total} 条`,
+    total: total => `共${total}条`,
     item: '条',
-    pageNo: page => `第 ${page} 页`,
+    pageNo: page => `第${page}页`,
     ok: '确定',
   },
 };

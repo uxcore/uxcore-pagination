@@ -4,13 +4,13 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
-import { polyfill } from 'react-lifecycles-compat';
 import Select from 'uxcore-select2';
-import Icon from 'uxcore-icon';
+
 import Pager from './Pager';
 import Options from './Options';
 import i18n from './locale';
+import PropTypes from 'prop-types';
+import { polyfill } from 'react-lifecycles-compat';
 
 function noop() {
 }
@@ -179,13 +179,13 @@ class Pagination extends React.Component {
       return (
         <ul className={`${prefixCls} ${props.className}`}>
           <li title="Previous Page" onClick={this._prev} className={`${this._hasPrev() ? '' : `${prefixCls}-disabled `}${prefixCls}-prev`}>
-            <Icon usei name="left" />
+            <a className="kuma-icon kuma-icon-chevron-left" />
           </li>
           <div title={`Page ${this.state.current}`} className={`${prefixCls}-unknown-total`}>
             <span className={`${prefixCls}-current`}>{i18n[props.locale].pageNo(this.state._current)}</span>
           </div>
           <li title="Next Page" onClick={this._next} className={`${this._hasNext() ? '' : `${prefixCls}-disabled `}${prefixCls}-next`}>
-            <Icon usei name="right" />
+            <a className="kuma-icon kuma-icon-chevron-right" />
           </li>
         </ul>
       );
@@ -195,7 +195,7 @@ class Pagination extends React.Component {
       return (
         <ul className={`${prefixCls} ${prefixCls}-simple ${props.className}`}>
           <li title="Previous Page" onClick={this._prev} className={`${this._hasPrev() ? '' : `${prefixCls}-disabled `}${prefixCls}-prev`}>
-            <Icon usei name="left" />
+            <a className="kuma-icon kuma-icon-chevron-left" />
           </li>
           <div title={`Page ${this.state.current} of ${allPages}`} className={`${prefixCls}-simple-pager`}>
             <span className={`${prefixCls}-current`}>{this.state._current}</span>
@@ -203,35 +203,34 @@ class Pagination extends React.Component {
             {allPages}
           </div>
           <li title="Next Page" onClick={this._next} className={`${this._hasNext() ? '' : `${prefixCls}-disabled `}${prefixCls}-next`}>
-            <Icon usei name="right" />
+            <a className="kuma-icon kuma-icon-chevron-right" />
           </li>
         </ul>
       );
     }
 
-    const pageShowCount = props.pageShowCount || props.maxUnfoldedLength || 9;
-    if (allPages <= pageShowCount) {
+    if (allPages <= this.props.maxUnfoldedLength) {
       for (let i = 1; i <= allPages; i++) {
         const active = this.state.current === i;
-        pagerList.push(<Pager
-          rootPrefixCls={prefixCls}
-          onClick={this._handleChange.bind(this, i)}
-          key={i}
-          page={i}
-          active={active}
-        />);
+        pagerList.push(
+          <Pager
+            rootPrefixCls={prefixCls}
+            onClick={this._handleChange.bind(this, i)}
+            key={i}
+            page={i}
+            active={active}
+          />
+        );
       }
     } else {
       jumpPrev = (
         <li title="Previous 5 Page" key="prev" onClick={this._jumpPrev} className={`${prefixCls}-jump-prev`}>
-          <Icon usei name="more-dot" />
-          <Icon usei name="left_double" />
+          <a />
         </li>
       );
       jumpNext = (
         <li title="Next 5 Page" key="next" onClick={this._jumpNext} className={`${prefixCls}-jump-next`}>
-          <Icon usei name="more-dot" />
-          <Icon usei name="right_double" />
+          <a />
         </li>
       );
       lastPager = (
@@ -268,13 +267,15 @@ class Pagination extends React.Component {
 
       for (let i = left; i <= right; i++) {
         const active = current === i;
-        pagerList.push(<Pager
-          rootPrefixCls={prefixCls}
-          onClick={this._handleChange.bind(this, i)}
-          key={i}
-          page={i}
-          active={active}
-        />);
+        pagerList.push(
+          <Pager
+            rootPrefixCls={prefixCls}
+            onClick={this._handleChange.bind(this, i)}
+            key={i}
+            page={i}
+            active={active}
+          />
+        );
       }
 
       if (current - 1 >= 4) {
@@ -299,11 +300,11 @@ class Pagination extends React.Component {
       >
         {this.renderTotal()}
         <li title="Previous Page" onClick={this._prev} className={`${this._hasPrev() ? '' : `${prefixCls}-disabled `}${prefixCls}-prev`}>
-          <Icon usei name="left" />
+          <a className="kuma-icon kuma-icon-chevron-left" />
         </li>
         {pagerList}
         <li title="Next Page" onClick={this._next} className={`${this._hasNext() ? '' : `${prefixCls}-disabled `}${prefixCls}-next`}>
-          <Icon usei name="right" />
+          <a className="kuma-icon kuma-icon-chevron-right" />
         </li>
         <Options
           rootPrefixCls={prefixCls}
@@ -336,7 +337,7 @@ Pagination.propTypes = {
   onShowSizeChange: PropTypes.func,
   selectComponentClass: PropTypes.func,
   showQuickJumper: PropTypes.bool,
-  pageShowCount: PropTypes.number,
+  maxUnfoldedLength: PropTypes.number,
 };
 
 Pagination.defaultProps = {
@@ -354,7 +355,7 @@ Pagination.defaultProps = {
   showQuickJumper: false,
   showSizeChanger: false,
   onShowSizeChange: noop,
-  pageShowCount: undefined,
+  maxUnfoldedLength: 9,
 };
 
 Pagination.displayName = 'Pagination';

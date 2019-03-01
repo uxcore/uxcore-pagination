@@ -2,13 +2,13 @@
 
 ---
 
-## 0.7.7
+## 0.7.8
 
-* `FIXED` [issue 30](https://github.com/uxcore/uxcore-pagination/issues/30)
+`FIX` roll-back to version 0.7.6 because of legao style problem
 
 ## 0.7.6
 
-* `NEW` add `pageShowCount` Props API
+* `CHANGED` add `maxUnfoldedLength` Props API
 
 ## 0.7.2
 

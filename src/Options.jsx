@@ -1,9 +1,9 @@
 import React from 'react';
 import Button from 'uxcore-button';
-import PropTypes from 'prop-types';
-import { polyfill } from 'react-lifecycles-compat';
 import KEYCODE from './KeyCode';
 import i18n from './locale';
+import PropTypes from 'prop-types';
+import { polyfill } from 'react-lifecycles-compat';
 
 class Options extends React.Component {
   static getDerivedStateFromProps(nextProps, prevState) {
