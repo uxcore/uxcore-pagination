@@ -7,7 +7,7 @@
  */
 
 @__paginationPrefixCls: kuma-page;
-@__select-prefix-cls: kuma-select2;
+@__selectPrefixCls: kuma-select2;
 
 .@{__paginationPrefixCls} {
   font-size: 12px;
@@ -169,16 +169,16 @@
     &-size-changer {
       float: left;
       width: 80px;
-      .@{__select-prefix-cls}-selection {
+      .@{__selectPrefixCls}-selection {
         height: 28px;
-        .@{__select-prefix-cls}-selection__rendered {
+        .@{__selectPrefixCls}-selection__rendered {
           line-height: 26px;
         }
       }
-      .@{__select-prefix-cls}-selection-selected-value {
+      .@{__selectPrefixCls}-selection-selected-value {
         padding-right: 0px;
       }
-      .@{__select-prefix-cls}-arrow {
+      .@{__selectPrefixCls}-arrow {
         height: 26px;
       }
     }
@@ -306,15 +306,15 @@
         }
       }
       .@{__paginationPrefixCls}-options-size-changer {
-        .@{__select-prefix-cls}-selection {
+        .@{__selectPrefixCls}-selection {
           height: 18px;
-          .@{__select-prefix-cls}-selection__rendered {
+          .@{__selectPrefixCls}-selection__rendered {
             line-height: 16px;
             >span {
               vertical-align: middle;
             }
           }
-          .@{__select-prefix-cls}-arrow {
+          .@{__selectPrefixCls}-arrow {
             height: 14px;
             line-height: 14px;
           }
@@ -336,7 +336,7 @@
 }
 
 .@{__paginationPrefixCls}-options-size-changer-dropdown {
-  .@{__select-prefix-cls}-dropdown-menu-item {
+  .@{__selectPrefixCls}-dropdown-menu-item {
     padding: 7px 16px 7px 11px;
   }
 }
