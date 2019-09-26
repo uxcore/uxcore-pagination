@@ -52,6 +52,7 @@ http://uxcore.github.io/uxcore/components/pagination/
 |locale|语言(zh-cn/en-us)|string|zh-cn|
 |current|当前页数|number|1|
 |total|数据总数|number/jsx|0|
+|totalSizeOffset|数据总数偏移，会在计算分页时加在total上进行计算，用于占位|number|0|
 |pageSize|每页条数|number|10|
 |onChange|页码改变的回调，参数是改变后的页码|function|noop|
 |showTotal|是否显示共多少条|boolean|false|
