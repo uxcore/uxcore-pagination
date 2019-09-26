@@ -81,7 +81,7 @@ class Pagination extends React.Component {
     if ([0, undefined, null].indexOf(total) !== -1) {
       return Infinity;
     }
-    return Math.floor((total - 1) / pageSize) + 1;
+    return Math.floor((total - 1 + this.props.totalSizeOffset) / pageSize) + 1;
   }
 
   _isValid(page) {
@@ -326,6 +326,7 @@ class Pagination extends React.Component {
 Pagination.propTypes = {
   current: PropTypes.number,
   total: PropTypes.number,
+  totalSizeOffset: PropTypes.number,
   locale: PropTypes.string,
   prefixCls: PropTypes.string,
   showTotal: PropTypes.bool,
@@ -342,6 +343,7 @@ Pagination.propTypes = {
 Pagination.defaultProps = {
   current: 1,
   total: 0,
+  totalSizeOffset: 0,
   locale: 'zh-cn',
   showTotal: false,
   pageSize: 10,

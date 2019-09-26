@@ -2,7 +2,11 @@
 
 ---
 
-## 0.8.0
+## 0.7.8
+
+* `NEW` add `totalSizeOffset` Props API
+
+## 0.7.7
 
 * `CHANGED` change all icons to uxcore-icon
 
