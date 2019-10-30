@@ -1,6 +1,6 @@
 {
   "name": "uxcore-pagination",
-  "version": "0.8.2",
+  "version": "0.7.10",
   "description": "pagination ui component for react",
   "main": "build/index.js",
   "scripts": {
@@ -51,7 +51,6 @@
     "prop-types": "15.x",
     "react-lifecycles-compat": "^3.0.4",
     "uxcore-button": "*",
-    "uxcore-icon": "*",
     "uxcore-select2": "*"
   },
   "author": "",
