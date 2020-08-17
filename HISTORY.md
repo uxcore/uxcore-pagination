@@ -1,6 +1,8 @@
 # History
 
 ---
+## 0.8.3
+* `NEW` zh-hk support
 
 ## 0.8.2
 
@@ -38,7 +40,7 @@
 
 * `CHANGED` Migrate to react 16.x
 
-## 0.6.2  
+## 0.6.2
 
 * `CHANGED` Migrate to react 15.x
 
@@ -48,7 +50,7 @@
 
 ## 0.6.0
 
-* `CHANGED` add quick jumper button 
+* `CHANGED` add quick jumper button
 * `CHANGED` quick jumper input value follow the current page
 
 ## 0.5.2
