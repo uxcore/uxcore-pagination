@@ -33,7 +33,7 @@ export default class Demo extends React.Component {
           total={50.9}
           pageSize={8}
           pageShowCount={6}
-          locale="en"
+          locale="zh-hk"
           getSelectPopupContainer={() => {
             const div = document.createElement('div');
             div.className = 'uxcore';
@@ -44,7 +44,7 @@ export default class Demo extends React.Component {
         <h2>更多分页:</h2>
         <Pagination onChange={onChange} total={500} showTotal locale="en-us" />
         <h2>快速跳转到某一页:</h2>
-        <Pagination showQuickJumper showTotal onChange={onChange} total={500000} />
+        <Pagination showQuickJumper showTotal onChange={onChange} total={500000} locale="zh-hk"/>
         <h2>迷你版本:</h2>
         <Pagination className="mini" current={this.state.index} showTotal showQuickJumper onChange={me.handleChange.bind(me)} total={5000} sizeOptions={[5, 10, 20]} pageSize={5} showSizeChanger />
         <h2>简单地翻页:</h2>

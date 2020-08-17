@@ -17,6 +17,15 @@ const locale = {
     pageNo: page => `第 ${page} 页`,
     ok: '确定',
   },
+  'zh-hk': {
+    items_per_page: '條/頁',
+    jump_to: '跳至',
+    page: '頁',
+    total: total => `共 ${total} 條`,
+    item: '條',
+    pageNo: page => `第 ${page} 頁`,
+    ok: '確定',
+  },
 };
 locale.en = locale['en-us'];
 
