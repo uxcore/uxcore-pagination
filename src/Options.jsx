@@ -3,7 +3,6 @@ import Button from 'uxcore-button';
 import PropTypes from 'prop-types';
 import { polyfill } from 'react-lifecycles-compat';
 import KEYCODE from './KeyCode';
-import i18n from './locale';
 
 class Options extends React.Component {
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -100,7 +99,7 @@ class Options extends React.Component {
         >
           {sizeOptions.map(option => (
             <Option key={option} value={`${option}`}>
-              {option + i18n[props.locale].items_per_page}
+              {option + props.localePack.items_per_page}
             </Option>
           ))}
         </Select>
@@ -110,7 +109,7 @@ class Options extends React.Component {
     if (quickGo) {
       goInput = (
         <div title="Quick jump to page" className={`${prefixCls}-quick-jumper`}>
-          {i18n[props.locale].jump_to}
+          {props.localePack.jump_to}
           <input
             type="text"
             className="kuma-input"
@@ -118,13 +117,13 @@ class Options extends React.Component {
             onChange={this._handleChange.bind(this)}
             onKeyUp={this._go.bind(this)}
           />
-          {i18n[props.locale].page}
+          {props.localePack.page}
           <Button
             type="secondary"
             size="small"
             className={`${prefixCls}-quick-jumper-button`}
             onClick={this.handleButtonClick}
-          >{i18n[props.locale].ok}</Button>
+          >{props.localePack.ok}</Button>
         </div>
       );
     }
@@ -144,6 +143,7 @@ Options.propTypes = {
   quickGo: PropTypes.func,
   selectComponentClass: PropTypes.func,
   current: PropTypes.number,
+  localePack: PropTypes.object,
 };
 /* eslint-enable react/require-default-props */
 

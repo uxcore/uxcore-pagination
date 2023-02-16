@@ -1,6 +1,7 @@
 /* eslint no-console: "off" */
 import React from 'react';
 import Pagination from '../src/index';
+import UxcoreConfigProvider from 'uxcore-config-provider';
 
 function onChange(key) {
   console.log(key);
@@ -24,6 +25,19 @@ export default class Demo extends React.Component {
   render() {
     const me = this;
     return (
+      <UxcoreConfigProvider localePack={
+        {
+          Pagination: {
+            items_per_page: '条/页（自定义文案）',
+            jump_to: '跳至（自定义文案）',
+            page: '页（自定义文案）',
+            total: total => `共 ${total} 条（自定义文案）`,
+            item: '条（自定义文案）',
+            pageNo: page => `第 ${page} 页（自定义文案）`,
+            ok: '确定（自定义文案）',
+          }
+        }
+      }>
       <div>
         <h2>基础分页:</h2>
         <Pagination
@@ -52,6 +66,7 @@ export default class Demo extends React.Component {
         <h2>总数未知</h2>
         <Pagination simple onChange={me.handleChange.bind(me)} pageSize={1} />
       </div>
+      </UxcoreConfigProvider>
     );
   }
 }
