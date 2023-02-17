@@ -28,13 +28,13 @@ export default class Demo extends React.Component {
       <UxcoreConfigProvider localePack={
         {
           Pagination: {
-            items_per_page: '条/页（自定义文案）',
-            jump_to: '跳至（自定义文案）',
-            page: '页（自定义文案）',
-            total: total => `共 ${total} 条（自定义文案）`,
-            item: '条（自定义文案）',
-            pageNo: page => `第 ${page} 页（自定义文案）`,
-            ok: '确定（自定义文案）',
+            // items_per_page: '条/页（自定义文案）',
+            // jump_to: '跳至（自定义文案）',
+            // page: '页（自定义文案）',
+            // total: total => `共 ${total} 条（自定义文案）`,
+            // item: '条（自定义文案）',
+            // pageNo: page => `第 ${page} 页（自定义文案）`,
+            // ok: '确定（自定义文案）',
           }
         }
       }>
