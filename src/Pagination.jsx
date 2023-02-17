@@ -351,7 +351,7 @@ Pagination.defaultProps = {
   total: 0,
   totalSizeOffset: 0,
   locale: 'zh-cn',
-  localePack: undefined,
+  localePack: {},
   showTotal: false,
   pageSize: 10,
   sizeOptions: [10, 20, 30, 40],
