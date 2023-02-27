@@ -156,10 +156,10 @@ class Pagination extends React.Component {
     return this.state.current < this._calcPage();
   }
 
-  renderTotal() {
-    const { locale, total } = this.props;
+  renderTotal(mergedLang) {
+    const { total } = this.props;
     if (this.props.showTotal) {
-      return <li className={`${this.props.prefixCls}-total`}>{i18n[locale].total(Math.floor(total))}</li>;
+      return <li className={`${this.props.prefixCls}-total`}>{mergedLang.total(Math.floor(total))}</li>;
     }
     return null;
   }
@@ -175,6 +175,10 @@ class Pagination extends React.Component {
     let firstPager = null;
     let lastPager = null;
 
+    const { context = {} } = this;
+    const { localePack = {} } = context;
+    const mergedLang = { ...i18n[props.locale], ...localePack.Pagination, ...this.props.localePack };
+
     if ([0, undefined, null].indexOf(Math.floor(props.total)) !== -1) {
       return (
         <ul className={`${prefixCls} ${props.className}`}>
@@ -182,7 +186,7 @@ class Pagination extends React.Component {
             <Icon usei name="left" />
           </li>
           <div title={`Page ${this.state.current}`} className={`${prefixCls}-unknown-total`}>
-            <span className={`${prefixCls}-current`}>{i18n[props.locale].pageNo(this.state._current)}</span>
+            <span className={`${prefixCls}-current`}>{mergedLang.pageNo(this.state._current)}</span>
           </div>
           <li title="Next Page" onClick={this._next} className={`${this._hasNext() ? '' : `${prefixCls}-disabled `}${prefixCls}-next`}>
             <Icon usei name="right" />
@@ -297,7 +301,7 @@ class Pagination extends React.Component {
         className={`${prefixCls} ${props.className}`}
         unselectable="unselectable"
       >
-        {this.renderTotal()}
+        {this.renderTotal(mergedLang)}
         <li title="Previous Page" onClick={this._prev} className={`${this._hasPrev() ? '' : `${prefixCls}-disabled `}${prefixCls}-prev`}>
           <Icon usei name="left" />
         </li>
@@ -309,6 +313,7 @@ class Pagination extends React.Component {
           rootPrefixCls={prefixCls}
           ref={(options) => { this.options = options; }}
           locale={props.locale}
+          localePack={mergedLang}
           selectComponentClass={props.selectComponentClass}
           getPopupContainer={props.getSelectPopupContainer}
           selectPrefixCls={props.selectPrefixCls}
@@ -328,6 +333,7 @@ Pagination.propTypes = {
   total: PropTypes.number,
   totalSizeOffset: PropTypes.number,
   locale: PropTypes.string,
+  localePack: PropTypes.object,
   prefixCls: PropTypes.string,
   showTotal: PropTypes.bool,
   pageSize: PropTypes.number,
@@ -345,6 +351,7 @@ Pagination.defaultProps = {
   total: 0,
   totalSizeOffset: 0,
   locale: 'zh-cn',
+  localePack: {},
   showTotal: false,
   pageSize: 10,
   sizeOptions: [10, 20, 30, 40],
@@ -363,4 +370,7 @@ Pagination.displayName = 'Pagination';
 
 polyfill(Pagination);
 
+Pagination.contextTypes = {
+  localePack: PropTypes.object
+}
 export default Pagination;
