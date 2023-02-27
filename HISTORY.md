@@ -1,6 +1,9 @@
 # History
 
 ---
+## 0.8.4
+* `NEW` support localePack
+
 ## 0.8.3
 * `NEW` zh-hk support
 
