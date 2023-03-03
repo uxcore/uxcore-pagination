@@ -1,4 +1,4 @@
-const locale = {
+const LANG_PACK = {
   'en-us': {
     items_per_page: '/Page',
     jump_to: 'Page',
@@ -27,6 +27,8 @@ const locale = {
     ok: '確定',
   },
 };
-locale.en = locale['en-us'];
+LANG_PACK.en = LANG_PACK['en-us'];
+LANG_PACK['en_US'] = LANG_PACK['en-us'];
+LANG_PACK['zh_CN'] = LANG_PACK['zh-cn'];
 
-export default locale;
+export default LANG_PACK;
